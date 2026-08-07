@@ -1253,24 +1253,15 @@ html[data-theme="light"] body.index2-panel-skin tr:hover,[data-theme="light"] bo
 </style>
 
 
-<meta name="theme-color" content="#0f172a">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-title" content="OEE Lakiernia">
-<link rel="manifest" href="manifest.webmanifest">
-<link rel="apple-touch-icon" href="icons/icon-192.png">
-<style id="pwa-mobile-style">.pwa-install{position:fixed;right:10px;bottom:10px;z-index:99999;display:flex;gap:7px;padding:8px;border:1px solid #334155;border-radius:12px;background:rgba(15,23,42,.95)}.pwa-install button{padding:9px 12px!important;border:0;border-radius:8px;background:#2563eb;color:white;font-weight:800}.pwa-install .close{background:#475569}.pwa-offline{position:fixed;top:8px;left:50%;transform:translateX(-50%);z-index:100000;background:#b91c1c;color:#fff;padding:7px 12px;border-radius:999px;font:800 12px system-ui;display:none}body.is-offline .pwa-offline{display:block}@media(max-width:640px){.pwa-install{left:8px;right:8px;bottom:max(8px,env(safe-area-inset-bottom))}.pwa-install button:first-child{flex:1}body{padding-bottom:70px!important}}@media(display-mode:standalone){#pwaInstallButton{display:none}}</style>
-</head>
-<body>
-<div class="pwa-offline">Brak internetu. Dane online mogą być niedostępne.</div><div id="pwaInstallBox" class="pwa-install" hidden><button id="pwaInstallButton" type="button">Zainstaluj aplikację</button><button id="pwaCloseButton" class="close" type="button">×</button></div>
+<meta name="theme-color" content="#0f172a"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="OEE Lakiernia"><meta name="mobile-web-app-capable" content="yes"><link rel="manifest" href="manifest.webmanifest"><link rel="apple-touch-icon" href="icons/icon-192.png">
+<style id="pwa-fix-v21">.pwa-install-box{position:fixed;right:10px;bottom:10px;z-index:99999;display:flex;gap:7px;padding:8px;border:1px solid #334155;border-radius:12px;background:rgba(15,23,42,.96)}.pwa-install-box[hidden]{display:none!important}.pwa-install-box button{padding:9px 12px!important;border:0;border-radius:8px;background:#2563eb;color:#fff;font-weight:800}.pwa-install-box .close{background:#475569}.pwa-main-nav{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:0 0 14px;padding:10px;border:1px solid var(--border-color,#334155);border-radius:12px;background:var(--bg-inputs-flex,#0f172a)}.pwa-main-nav a,.pwa-main-nav button{display:flex;align-items:center;justify-content:center;min-height:44px;width:100%;padding:9px 12px!important;border:0;border-radius:9px;text-decoration:none;background:#475569;color:#fff;font:800 13px system-ui;cursor:pointer}.pwa-main-nav .active{background:#2563eb}@media(max-width:700px){.pwa-main-nav{grid-template-columns:1fr}.pwa-main-nav a,.pwa-main-nav button{min-height:48px;font-size:15px}}@media(display-mode:standalone){.pwa-install-box{display:none!important}}</style></head>
+<body><div id="pwaInstallBox" class="pwa-install-box" hidden><button id="pwaInstallButton" type="button">Zainstaluj aplikację</button><button id="pwaCloseButton" class="close" type="button">×</button></div>
 
-
-<div class="container"><nav style="display:flex;gap:8px;flex-wrap:wrap;margin:0 0 12px;padding:9px;border:1px solid #334155;border-radius:10px"><a href="panel.html" style="padding:9px 12px;border-radius:8px;background:#2563eb;color:#fff;text-decoration:none;font-weight:800">Panel OEE</a><a href="config_panel.html" style="padding:9px 12px;border-radius:8px;background:#475569;color:#fff;text-decoration:none;font-weight:800">Przerwy i 6S</a></nav>
+<div class="container"><nav class="pwa-main-nav"><a class="active" href="panel.html">Panel OEE</a><a href="config_panel.html">Przerwy i 6S</a><button type="button" onclick="openConfigModal()">Konfiguracja progów</button></nav>
     <div class="header-container">
         <h2>Miesięczny Panel OEE - Lakiernia</h2>
         <div class="header-controls">
             <select id="operatorModeChooser" class="theme-select" onchange="setPanelMode(this.value)"><option value="manager">Tryb kierownika</option><option value="operator">Tryb operatora</option></select>
-            <button class="btn-config-trigger" onclick="openConfigModal()">⚙️ Konfiguracja progów</button>
-            <button class="btn-config-trigger" onclick="window.location.href='config_panel.html'">⏱️🧹 Konfiguracja Przerw / 6S</button>
             <div class="theme-switcher">
                 <label for="themeChooser">Motyw:</label>
                 <select id="themeChooser" class="theme-select" onchange="changeTheme(this.value)">
@@ -3564,5 +3555,5 @@ html[data-theme="light"] body.index2-panel-skin .director-mini-sub,
 })();
 </script>
 
-\n<script id="pwa-mobile-script">(function(){var promptEvent=null,box=document.getElementById('pwaInstallBox'),btn=document.getElementById('pwaInstallButton'),close=document.getElementById('pwaCloseButton');function online(){document.body.classList.toggle('is-offline',!navigator.onLine)}online();addEventListener('online',online);addEventListener('offline',online);addEventListener('beforeinstallprompt',function(e){e.preventDefault();promptEvent=e;box.hidden=false});btn.addEventListener('click',async function(){if(promptEvent){promptEvent.prompt();await promptEvent.userChoice;promptEvent=null;box.hidden=true}else alert(/iPhone|iPad|iPod/.test(navigator.userAgent)?'Safari: Udostępnij → Do ekranu początkowego.':'Menu przeglądarki → Zainstaluj aplikację lub Dodaj do ekranu głównego.')});close.addEventListener('click',function(){box.hidden=true});setTimeout(function(){if(!matchMedia('(display-mode: standalone)').matches)box.hidden=false},1600);if('serviceWorker' in navigator)addEventListener('load',function(){navigator.serviceWorker.register('./sw.js').catch(console.warn)});})();</script>\n</body>
+<script id="pwa-fix-v21-script">(function(){var d=null,b=document.getElementById('pwaInstallBox'),i=document.getElementById('pwaInstallButton'),c=document.getElementById('pwaCloseButton');function s(){return matchMedia('(display-mode: standalone)').matches||navigator.standalone===true}addEventListener('beforeinstallprompt',function(e){e.preventDefault();d=e;if(!s())b.hidden=false});i.onclick=async function(){if(d){d.prompt();await d.userChoice;d=null;b.hidden=true}else alert(/iPhone|iPad|iPod/.test(navigator.userAgent)?'Safari: Udostępnij → Do ekranu początkowego.':'Menu przeglądarki → Zainstaluj aplikację.')};c.onclick=function(){b.hidden=true;sessionStorage.setItem('pwa-closed','1')};addEventListener('appinstalled',function(){b.hidden=true});if(s())b.hidden=true;else if(sessionStorage.getItem('pwa-closed')!=='1')setTimeout(function(){if(!s())b.hidden=false},1500);if('serviceWorker' in navigator)addEventListener('load',function(){navigator.serviceWorker.register('./sw.js').then(function(r){r.update()}).catch(console.warn)});})();</script><script>addEventListener('load',function(){if(location.hash==='#konfiguracja-progow')setTimeout(function(){openConfigModal()},350)});</script></body>
 </html>
