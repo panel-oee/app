@@ -1,5 +1,3 @@
-# OEE Lakiernia PWA v3.0
+# OEE Lakiernia PWA 3.0.0
 
-Wersja zawiera Dashboard dzisiaj, powiadomienia PWA o przerwach/6S/braku raportu oraz osobną analizę Pareto strat.
-
-Wgraj wszystkie pliki z ZIP do głównego katalogu GitHub Pages i zastąp istniejące. Po aktualizacji warto odświeżyć stronę lub ponownie uruchomić zainstalowaną aplikację.
+Dodano metadane wersji 3.0.0 w `manifest.webmanifest`, widoczny znacznik `Wersja 3.0` w aplikacji oraz nowy cache Service Workera. Uwaga: systemowy ekran Android „Informacje o aplikacji” może nadal pokazywać wersję WebAPK nadawaną przez Chrome, której PWA nie kontroluje bezpośrednio.

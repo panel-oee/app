@@ -1,4 +1,4 @@
-const CACHE_NAME='oee-lakiernia-v3-0-20260818';
+const CACHE_NAME='oee-lakiernia-v3-0-1-20260818';
 const APP_SHELL=['./','./panel.html','./config_panel.html','./offline.html','./manifest.webmanifest','./icons/icon-192.png','./icons/icon-512.png'];
 self.addEventListener('install',event=>{event.waitUntil(caches.open(CACHE_NAME).then(cache=>cache.addAll(APP_SHELL)));});
 self.addEventListener('activate',event=>{event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k!==CACHE_NAME).map(k=>caches.delete(k)))).then(()=>self.clients.claim()));});
