@@ -1,14 +1,24 @@
 {
-  "id": "oee-lakiernia-pwa-v2-1",
+  "id": "oee-lakiernia-pwa-v2",
   "name": "Panel OEE Lakiernia",
   "short_name": "OEE Lakiernia",
+  "description": "Mobilny panel OEE, harmonogram przerw i obsługa zadań 6S.",
   "lang": "pl",
   "start_url": "./panel.html",
   "scope": "./",
   "display": "standalone",
+  "display_override": [
+    "window-controls-overlay",
+    "standalone",
+    "minimal-ui"
+  ],
   "orientation": "any",
   "background_color": "#0f172a",
   "theme_color": "#0f172a",
+  "categories": [
+    "business",
+    "productivity"
+  ],
   "icons": [
     {
       "src": "icons/icon-192.png",
@@ -21,6 +31,30 @@
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Panel OEE",
+      "short_name": "OEE",
+      "url": "./panel.html",
+      "icons": [
+        {
+          "src": "icons/icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Przerwy i 6S",
+      "short_name": "6S",
+      "url": "./config_panel.html",
+      "icons": [
+        {
+          "src": "icons/icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
     }
   ]
 }
