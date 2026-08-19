@@ -1,8 +1,8 @@
 {
-  "id": "oee-lakiernia-pwa-v3-1",
-  "name": "Panel OEE Lakiernia 3.1",
-  "short_name": "OEE 3.1",
-  "description": "Panel OEE Lakiernia PWA, wersja 3.1 na bazie zaktualizowanego panel.html.",
+  "id": "oee-lakiernia-pwa-v3-2",
+  "name": "Panel OEE Lakiernia 3.2",
+  "short_name": "OEE 3.2",
+  "description": "Panel OEE Lakiernia PWA, wersja 3.2 na bazie najnowszego panel.html.",
   "lang": "pl",
   "start_url": "./panel.html",
   "scope": "./",
@@ -10,8 +10,8 @@
   "orientation": "any",
   "background_color": "#0f172a",
   "theme_color": "#0f172a",
-  "version": "3.1.0",
-  "app_version": "3.1.0",
+  "version": "3.2.0",
+  "app_version": "3.2.0",
   "icons": [
     {
       "src": "icons/icon-192.png",
