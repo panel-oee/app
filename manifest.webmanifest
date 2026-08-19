@@ -1,8 +1,8 @@
 {
   "id": "oee-lakiernia-pwa-v3-2",
-  "name": "Panel OEE Lakiernia 3.2",
-  "short_name": "OEE 3.2",
-  "description": "Panel OEE Lakiernia PWA, wersja 3.2. Na górze tylko nawigacja, na dole tylko belka wersji.",
+  "name": "Panel OEE Lakiernia 3.3",
+  "short_name": "OEE 3.3",
+  "description": "Panel OEE Lakiernia PWA z wykresem Pareto strat.",
   "lang": "pl",
   "start_url": "./panel.html",
   "scope": "./",
@@ -57,6 +57,6 @@
       ]
     }
   ],
-  "version": "3.2.0",
-  "app_version": "3.2.0"
+  "version": "3.3.0",
+  "app_version": "3.3.0"
 }
