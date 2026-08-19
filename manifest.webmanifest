@@ -2,7 +2,7 @@
   "id": "oee-lakiernia-pwa-v3-2",
   "name": "Panel OEE Lakiernia 3.2",
   "short_name": "OEE 3.2",
-  "description": "Panel OEE Lakiernia PWA, wersja 3.2 na bazie najnowszego panel.html.",
+  "description": "Panel OEE Lakiernia PWA, wersja 3.2. Belka nawigacji przeniesiona na dół, bez skrótu Statystyki 6S.",
   "lang": "pl",
   "start_url": "./panel.html",
   "scope": "./",
@@ -42,17 +42,6 @@
       "name": "Przerwy i 6S",
       "short_name": "6S",
       "url": "./config_panel.html",
-      "icons": [
-        {
-          "src": "icons/icon-192.png",
-          "sizes": "192x192"
-        }
-      ]
-    },
-    {
-      "name": "Statystyki 6S",
-      "short_name": "Stat 6S",
-      "url": "./statystyki_6S.html",
       "icons": [
         {
           "src": "icons/icon-192.png",

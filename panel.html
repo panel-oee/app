@@ -1262,7 +1262,7 @@ html[data-theme="light"] body.index2-panel-skin tr:hover,[data-theme="light"] bo
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="apple-touch-icon" href="icons/icon-192.png">
 <style id="pwa-v32-style">
-.pwa-install-box{position:fixed;right:10px;bottom:10px;z-index:99999;display:flex;gap:7px;padding:8px;border:1px solid #334155;border-radius:12px;background:rgba(15,23,42,.96);box-shadow:0 12px 28px rgba(0,0,0,.35)}.pwa-install-box[hidden]{display:none!important}.pwa-install-box button{padding:9px 12px!important;border:0;border-radius:8px;background:#2563eb;color:#fff;font-weight:800}.pwa-install-box .close{background:#475569}.pwa-main-nav{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px;margin:0 0 14px;padding:10px;border:1px solid var(--border-color,#334155);border-radius:12px;background:var(--bg-inputs-flex,#0f172a)}.pwa-main-nav a,.pwa-main-nav button,.pwa-main-nav span{display:flex;align-items:center;justify-content:center;min-height:44px;width:100%;padding:9px 12px!important;border:0;border-radius:9px;text-decoration:none;background:#475569;color:#fff;font:800 13px system-ui;cursor:pointer}.pwa-main-nav .active{background:#2563eb}.pwa-main-nav .app-version-pill{background:#0f172a;color:#7dd3fc;border:1px solid #38bdf8;cursor:default;font-size:11px;letter-spacing:.35px}@media(max-width:900px){.pwa-main-nav{grid-template-columns:1fr 1fr}.pwa-main-nav .app-version-pill{grid-column:1/-1}}@media(max-width:620px){.pwa-main-nav{grid-template-columns:1fr}.pwa-main-nav a,.pwa-main-nav button{min-height:48px;font-size:15px}}@media(display-mode:standalone){.pwa-install-box{display:none!important}}
+.pwa-install-box{position:fixed;right:10px;bottom:10px;z-index:99999;display:flex;gap:7px;padding:8px;border:1px solid #334155;border-radius:12px;background:rgba(15,23,42,.96);box-shadow:0 12px 28px rgba(0,0,0,.35)}.pwa-install-box[hidden]{display:none!important}.pwa-install-box button{padding:9px 12px!important;border:0;border-radius:8px;background:#2563eb;color:#fff;font-weight:800}.pwa-install-box .close{background:#475569}.pwa-main-nav{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin:0 0 14px;padding:10px;border:1px solid var(--border-color,#334155);border-radius:12px;background:var(--bg-inputs-flex,#0f172a)}.pwa-main-nav a,.pwa-main-nav button,.pwa-main-nav span{display:flex;align-items:center;justify-content:center;min-height:44px;width:100%;padding:9px 12px!important;border:0;border-radius:9px;text-decoration:none;background:#475569;color:#fff;font:800 13px system-ui;cursor:pointer}.pwa-main-nav .active{background:#2563eb}.pwa-main-nav .app-version-pill{background:#0f172a;color:#7dd3fc;border:1px solid #38bdf8;cursor:default;font-size:11px;letter-spacing:.35px}@media(max-width:900px){.pwa-main-nav{grid-template-columns:1fr 1fr}.pwa-main-nav .app-version-pill{grid-column:1/-1}}@media(max-width:620px){.pwa-main-nav{grid-template-columns:1fr}.pwa-main-nav a,.pwa-main-nav button{min-height:48px;font-size:15px}}.pwa-bottom-nav{margin:24px 0 0}.pwa-bottom-nav .app-version-pill{font-weight:900}@media(display-mode:standalone){.pwa-install-box{display:none!important}}
 </style>
 <style id="oee-v30-style">
 /* OEE Lakiernia v3.0: Dashboard dzisiaj, powiadomienia, Pareto strat */
@@ -1276,8 +1276,7 @@ body.operator-mode .pareto-section{display:none!important}
 <body><div id="pwaInstallBox" class="pwa-install-box" hidden><button id="pwaInstallButton" type="button">Zainstaluj aplikację</button><button id="pwaCloseButton" class="close" type="button" aria-label="Zamknij">×</button></div>
 
 
-<div class="container"><nav class="pwa-main-nav" aria-label="Główna nawigacja"><a class="active" href="panel.html">Panel OEE</a><a href="config_panel.html">Przerwy i 6S</a><button type="button" onclick="openConfigModal()">Konfiguracja progów</button><a href="statystyki_6S.html">Statystyki 6S</a><span class="app-version-pill">Wersja 3.2</span></nav>
-    <div class="header-container">
+<div class="container"><div class="header-container">
         <h2>Miesięczny Panel OEE - Lakiernia</h2>
         <div class="header-controls">
             <select id="operatorModeChooser" class="theme-select" onchange="setPanelMode(this.value)"><option value="manager">Tryb kierownika</option><option value="operator">Tryb operatora</option></select>
@@ -1514,6 +1513,7 @@ body.operator-mode .pareto-section{display:none!important}
 </div>
 
 
+<nav class="pwa-main-nav pwa-bottom-nav" aria-label="Dolna nawigacja"><a class="active" href="panel.html">Panel OEE</a><a href="config_panel.html">Przerwy i 6S</a><button type="button" onclick="openConfigModal()">Konfiguracja progów</button><span class="app-version-pill">Wersja 3.2</span></nav>
 <div id="sixsConfigModal" class="gema-modal-overlay">
     <div class="gema-modal break-config-modal">
         <div class="gema-modal-header">Konfiguracja zadań 6S</div>
