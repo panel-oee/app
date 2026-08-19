@@ -2,16 +2,23 @@
   "id": "oee-lakiernia-pwa-v3-2",
   "name": "Panel OEE Lakiernia 3.2",
   "short_name": "OEE 3.2",
-  "description": "Panel OEE Lakiernia PWA, wersja 3.2. Belka nawigacji przeniesiona na dół, bez skrótu Statystyki 6S.",
+  "description": "Panel OEE Lakiernia PWA, wersja 3.2. Na górze tylko nawigacja, na dole tylko belka wersji.",
   "lang": "pl",
   "start_url": "./panel.html",
   "scope": "./",
   "display": "standalone",
+  "display_override": [
+    "window-controls-overlay",
+    "standalone",
+    "minimal-ui"
+  ],
   "orientation": "any",
   "background_color": "#0f172a",
   "theme_color": "#0f172a",
-  "version": "3.2.0",
-  "app_version": "3.2.0",
+  "categories": [
+    "business",
+    "productivity"
+  ],
   "icons": [
     {
       "src": "icons/icon-192.png",
@@ -49,5 +56,7 @@
         }
       ]
     }
-  ]
+  ],
+  "version": "3.2.0",
+  "app_version": "3.2.0"
 }
