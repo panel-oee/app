@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>Panel OEE Lakiernia 3.4</title>
+    <title>Panel OEE Lakiernia 3.5</title>
     <style>
         /* ZMIENNE Z KOLORAMI DLA OBU TRYBÓW */
         :root {
@@ -1258,7 +1258,7 @@ html[data-theme="light"] body.index2-panel-skin tr:hover,[data-theme="light"] bo
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="OEE Lakiernia">
 <meta name="mobile-web-app-capable" content="yes">
-<meta name="app-version" content="3.4.0">
+<meta name="app-version" content="3.5.0">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="apple-touch-icon" href="icons/icon-192.png">
 <style id="pwa-v32-style">
@@ -1300,8 +1300,29 @@ html[data-theme="light"] body.index2-panel-skin .pareto-chart-v33{background:#ff
 <style id="app-auto-update-style">
 .app-update-modal{position:fixed;inset:0;z-index:200000;display:none;align-items:center;justify-content:center;padding:18px;background:rgba(2,6,23,.72);backdrop-filter:blur(5px)}.app-update-modal.show{display:flex}.app-update-card{width:min(460px,100%);background:var(--bg-container,#172338);color:var(--text-main,#f8fafc);border:1px solid #38bdf8;border-radius:16px;padding:20px;box-shadow:0 24px 70px rgba(0,0,0,.48)}.app-update-title{font-size:20px;font-weight:1000;color:#38bdf8;margin-bottom:8px}.app-update-copy{font-size:14px;line-height:1.45;color:var(--text-muted,#cbd5e1)}.app-update-version{margin:12px 0;padding:10px;border-radius:10px;background:rgba(56,189,248,.10);border:1px solid rgba(56,189,248,.35);font-weight:900}.app-update-actions{display:grid;grid-template-columns:1fr 1.4fr;gap:9px;margin-top:16px}.app-update-actions button{min-height:44px}.app-update-later{background:#475569;color:#fff}.app-update-now{background:#0284c7;color:#fff}.app-update-now:disabled{opacity:.65;cursor:wait}.app-update-status{min-height:18px;margin-top:10px;font-size:12px;font-weight:800;color:#7dd3fc}@media(max-width:520px){.app-update-actions{grid-template-columns:1fr}}
 </style>
+
+<style id="data-reminder-style">
+.reminder-settings-btn{background:#7c3aed!important}.reminder-settings-btn.enabled{background:#059669!important}.data-reminder-modal{position:fixed;inset:0;z-index:200100;display:none;align-items:center;justify-content:center;padding:18px;background:rgba(2,6,23,.74);backdrop-filter:blur(5px)}.data-reminder-modal.show{display:flex}.data-reminder-card{width:min(520px,100%);max-height:90vh;overflow:auto;background:var(--bg-container,#172338);color:var(--text-main,#f8fafc);border:1px solid #8b5cf6;border-radius:16px;padding:20px;box-shadow:0 24px 70px rgba(0,0,0,.48)}.data-reminder-title{font-size:19px;font-weight:1000;color:#a78bfa;margin-bottom:8px}.data-reminder-copy{font-size:13px;line-height:1.4;color:var(--text-muted,#cbd5e1);margin-bottom:14px}.data-reminder-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.data-reminder-field{display:flex;flex-direction:column;gap:5px}.data-reminder-field.full{grid-column:1/-1}.data-reminder-field label{font-size:11px;font-weight:950;color:var(--text-muted,#94a3b8);text-transform:uppercase;letter-spacing:.4px}.data-reminder-field input,.data-reminder-field select{width:100%;height:44px}.data-reminder-toggle{display:flex;align-items:center;gap:10px;padding:10px;border:1px solid var(--border-color,#334155);border-radius:10px;background:var(--bg-inputs-flex,#0f172a);font-weight:850}.data-reminder-toggle input{width:20px;height:20px}.data-reminder-days{display:grid;grid-template-columns:repeat(5,1fr);gap:6px}.data-reminder-day{padding:9px 4px;border:1px solid var(--border-color,#334155);border-radius:8px;text-align:center;background:var(--bg-inputs-flex,#0f172a);font-size:11px;font-weight:900}.data-reminder-day input{width:16px;height:16px;display:block;margin:0 auto 4px}.data-reminder-actions{display:grid;grid-template-columns:1fr 1fr 1.2fr;gap:8px;margin-top:16px}.data-reminder-actions button{min-height:43px}.data-reminder-save{background:#7c3aed;color:#fff}.data-reminder-test{background:#0284c7;color:#fff}.data-reminder-close{background:#475569;color:#fff}.data-reminder-status{margin-top:10px;min-height:18px;font-size:12px;font-weight:850;color:#a78bfa}.data-reminder-note{margin-top:12px;padding:9px;border:1px dashed #f59e0b;border-radius:9px;color:var(--text-muted,#cbd5e1);font-size:11px;line-height:1.35}@media(max-width:580px){.data-reminder-grid{grid-template-columns:1fr}.data-reminder-field.full{grid-column:auto}.data-reminder-actions{grid-template-columns:1fr}.data-reminder-days{grid-template-columns:repeat(5,minmax(46px,1fr));overflow-x:auto}}
+</style>
 </head>
 <body>
+<div id="dataReminderModal" class="data-reminder-modal" role="dialog" aria-modal="true" aria-labelledby="dataReminderTitle">
+ <div class="data-reminder-card">
+  <div id="dataReminderTitle" class="data-reminder-title">Przypomnienie o uzupełnieniu danych</div>
+  <div class="data-reminder-copy">Ustaw godzinę, o której aplikacja ma sprawdzić, czy raport OEE został zapisany, i wysłać przypomnienie, jeśli brakuje danych.</div>
+  <div class="data-reminder-grid">
+   <label class="data-reminder-toggle data-reminder-field full"><input id="dataReminderEnabled" type="checkbox"> Włącz przypomnienie o brakującym raporcie</label>
+   <div class="data-reminder-field"><label>Godzina przypomnienia</label><input id="dataReminderTime" type="time" value="08:00"></div>
+   <div class="data-reminder-field"><label>Raport do sprawdzenia</label><select id="dataReminderScope"><option value="previous">Poprzedni dzień roboczy</option><option value="today">Bieżący dzień</option></select></div>
+   <div class="data-reminder-field full"><label>Dni uruchamiania przypomnienia</label><div class="data-reminder-days"><label class="data-reminder-day"><input type="checkbox" data-reminder-day="1" checked>Pn</label><label class="data-reminder-day"><input type="checkbox" data-reminder-day="2" checked>Wt</label><label class="data-reminder-day"><input type="checkbox" data-reminder-day="3" checked>Śr</label><label class="data-reminder-day"><input type="checkbox" data-reminder-day="4" checked>Cz</label><label class="data-reminder-day"><input type="checkbox" data-reminder-day="5" checked>Pt</label></div></div>
+   <div class="data-reminder-field full"><label>Treść powiadomienia</label><input id="dataReminderMessage" type="text" maxlength="140" value="Uzupełnij brakujące dane raportu OEE."></div>
+  </div>
+  <div class="data-reminder-actions"><button class="data-reminder-close" type="button" onclick="closeDataReminderSettings()">Zamknij</button><button class="data-reminder-test" type="button" onclick="testDataReminder()">Wyślij test</button><button class="data-reminder-save" type="button" onclick="saveDataReminderSettings()">Zapisz ustawienia</button></div>
+  <div id="dataReminderStatus" class="data-reminder-status"></div>
+  <div class="data-reminder-note">Powiadomienie lokalne jest sprawdzane, gdy aplikacja jest uruchomiona lub pozostaje aktywna w tle. Pełne dostarczanie przy całkowicie zamkniętej aplikacji wymagałoby serwera wysyłającego powiadomienia Push.</div>
+ </div>
+</div>
+
 <div id="appUpdateModal" class="app-update-modal" role="dialog" aria-modal="true" aria-labelledby="appUpdateTitle">
   <div class="app-update-card">
     <div id="appUpdateTitle" class="app-update-title">Dostępna aktualizacja aplikacji</div>
@@ -1336,7 +1357,7 @@ html[data-theme="light"] body.index2-panel-skin .pareto-chart-v33{background:#ff
       <div class="today-dashboard-title">Dashboard dzisiaj</div>
       <div class="today-dashboard-sub" id="todayDashboardUpdated">Aktualizacja: —</div>
     </div>
-    <button id="notificationToggleBtn" class="today-notification-btn" type="button" onclick="enableOeeNotifications()">Włącz powiadomienia</button>
+    <button id="notificationToggleBtn" class="today-notification-btn" type="button" onclick="enableOeeNotifications()">Włącz powiadomienia</button><button id="dataReminderSettingsBtn" class="today-notification-btn reminder-settings-btn" type="button" onclick="openDataReminderSettings()">Przypomnienie danych</button>
   </div>
   <div class="today-card good" id="todayMonthOeeCard"><div class="label">OEE miesiąca</div><div class="value" id="todayMonthOee">—</div><div class="sub" id="todayMonthOeeSub">Bieżący miesiąc</div></div>
   <div class="today-card" id="todayShiftCard"><div class="label">Aktualna zmiana</div><div class="value" id="todayShift">—</div><div class="sub" id="todayShiftSub">Pozostało: —</div></div>
@@ -1564,7 +1585,7 @@ html[data-theme="light"] body.index2-panel-skin .pareto-chart-v33{background:#ff
 </div>
 
 
-<div class="pwa-version-footer" aria-label="Wersja aplikacji"><span>Wersja <span id="appVersionText">3.4</span></span></div>
+<div class="pwa-version-footer" aria-label="Wersja aplikacji"><span>Wersja <span id="appVersionText">3.5</span></span></div>
 <div id="sixsConfigModal" class="gema-modal-overlay">
     <div class="gema-modal break-config-modal">
         <div class="gema-modal-header">Konfiguracja zadań 6S</div>
@@ -3797,7 +3818,7 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
 <script id="app-auto-update-script">
 (function(){
   'use strict';
-  const CURRENT_APP_VERSION='3.4.0';
+  const CURRENT_APP_VERSION='3.5.0';
   const VERSION_URL='./version.json';
   const CHECK_INTERVAL=15*60*1000;
   let availableVersion=null;
@@ -3846,6 +3867,33 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
     window.checkOeeAppUpdate=function(){return checkForUpdate(true)};
   }
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
+})();
+</script>
+
+<script id="data-reminder-script">
+(function(){
+'use strict';
+const KEY='oee_data_reminder_settings_v1';
+const DEFAULTS={enabled:false,time:'08:00',scope:'previous',days:[1,2,3,4,5],message:'Uzupełnij brakujące dane raportu OEE.'};
+let timer=null;
+function $(id){return document.getElementById(id)}
+function load(){try{return Object.assign({},DEFAULTS,JSON.parse(localStorage.getItem(KEY)||'{}'))}catch(e){return Object.assign({},DEFAULTS)}}
+function dateKey(d){return typeof window.formatDateKey==='function'?window.formatDateKey(d):d.toISOString().slice(0,10)}
+function previousWorkday(){const d=new Date();d.setDate(d.getDate()-1);while(d.getDay()===0||d.getDay()===6)d.setDate(d.getDate()-1);return d}
+function targetDate(settings){return settings.scope==='today'?new Date():previousWorkday()}
+function reportExists(key){return !!(window.gemaBazaDanych&&window.gemaBazaDanych[key])}
+function setStatus(text,error){const e=$('dataReminderStatus');if(e){e.textContent=text||'';e.style.color=error?'#ef4444':'#a78bfa'}}
+function updateButton(){const s=load(),b=$('dataReminderSettingsBtn');if(!b)return;b.classList.toggle('enabled',!!s.enabled);b.textContent=s.enabled?'Przypomnienie '+s.time:'Przypomnienie danych'}
+function fill(){const s=load();$('dataReminderEnabled').checked=!!s.enabled;$('dataReminderTime').value=s.time||'08:00';$('dataReminderScope').value=s.scope||'previous';$('dataReminderMessage').value=s.message||DEFAULTS.message;document.querySelectorAll('[data-reminder-day]').forEach(function(e){e.checked=(s.days||[]).map(Number).includes(Number(e.dataset.reminderDay))});updateButton()}
+window.openDataReminderSettings=function(){fill();setStatus('');$('dataReminderModal').classList.add('show')}
+window.closeDataReminderSettings=function(){$('dataReminderModal').classList.remove('show')}
+window.saveDataReminderSettings=async function(){const days=Array.from(document.querySelectorAll('[data-reminder-day]:checked')).map(function(e){return Number(e.dataset.reminderDay)});const settings={enabled:$('dataReminderEnabled').checked,time:$('dataReminderTime').value||'08:00',scope:$('dataReminderScope').value,days:days.length?days:[1,2,3,4,5],message:($('dataReminderMessage').value||DEFAULTS.message).trim()};if(settings.enabled&&'Notification' in window&&Notification.permission==='default')await Notification.requestPermission();localStorage.setItem(KEY,JSON.stringify(settings));updateButton();setStatus('Ustawienia zapisane. Przypomnienie: '+settings.time+'.');schedule()}
+async function notify(title,body,tag){if(!('Notification' in window)){setStatus('Ta przeglądarka nie obsługuje powiadomień.',true);return false}if(Notification.permission==='default')await Notification.requestPermission();if(Notification.permission!=='granted'){setStatus('Powiadomienia są zablokowane w ustawieniach przeglądarki.',true);return false}try{if(navigator.serviceWorker&&navigator.serviceWorker.ready){const reg=await navigator.serviceWorker.ready;await reg.showNotification(title,{body:body,tag:tag,icon:'icons/icon-192.png',badge:'icons/icon-192.png',renotify:false})}else new Notification(title,{body:body,tag:tag,icon:'icons/icon-192.png'});return true}catch(e){setStatus('Nie udało się wysłać powiadomienia: '+e.message,true);return false}}
+window.testDataReminder=async function(){const ok=await notify('Test przypomnienia OEE','Powiadomienia o uzupełnieniu danych działają poprawnie.','oee-data-reminder-test');if(ok)setStatus('Wysłano powiadomienie testowe.')}
+async function check(force){const s=load();if(!s.enabled&&!force)return;const now=new Date();if(!force&&!s.days.map(Number).includes(now.getDay()))return;const hm=String(s.time||'08:00').split(':').map(Number),minutes=now.getHours()*60+now.getMinutes(),target=(hm[0]||0)*60+(hm[1]||0);if(!force&&Math.abs(minutes-target)>1)return;const d=targetDate(s),key=dateKey(d);if(reportExists(key))return;const once='oee_data_reminder_sent_'+key+'_'+s.time+'_'+dateKey(now);if(!force&&localStorage.getItem(once))return;const body=(s.message||DEFAULTS.message)+' Brak raportu za '+key+'.';const ok=await notify('Brak danych OEE',body,'oee-data-reminder-'+key);if(ok)localStorage.setItem(once,'1')}
+function schedule(){if(timer)clearInterval(timer);timer=setInterval(function(){check(false)},30000);setTimeout(function(){check(false)},2500)}
+function init(){fill();schedule();document.addEventListener('visibilitychange',function(){if(document.visibilityState==='visible')check(false)})}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
 })();
 </script>
 </body>
