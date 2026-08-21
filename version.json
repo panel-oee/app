@@ -1,0 +1,9 @@
+{
+  "version": "3.4.0",
+  "displayVersion": "3.4",
+  "build": "2026-08-21T06:21:00+02:00",
+  "released": "2026-08-21",
+  "message": "Dodano automatyczne wykrywanie aktualizacji, komunikat Aktualizuj teraz i synchronizację numeru wersji.",
+  "minimumVersion": "3.0.0",
+  "updateUrl": "./panel.html"
+}

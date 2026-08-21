@@ -1,24 +1,17 @@
 {
-  "id": "oee-lakiernia-pwa-v3-2",
-  "name": "Panel OEE Lakiernia 3.3",
-  "short_name": "OEE 3.3",
-  "description": "Panel OEE Lakiernia PWA z wykresem Pareto strat.",
+  "id": "oee-lakiernia-pwa",
+  "name": "Panel OEE Lakiernia 3.4",
+  "short_name": "OEE 3.4",
+  "description": "Panel OEE Lakiernia PWA, wersja 3.4.0.",
   "lang": "pl",
   "start_url": "./panel.html",
   "scope": "./",
   "display": "standalone",
-  "display_override": [
-    "window-controls-overlay",
-    "standalone",
-    "minimal-ui"
-  ],
   "orientation": "any",
   "background_color": "#0f172a",
   "theme_color": "#0f172a",
-  "categories": [
-    "business",
-    "productivity"
-  ],
+  "version": "3.4.0",
+  "app_version": "3.4.0",
   "icons": [
     {
       "src": "icons/icon-192.png",
@@ -56,7 +49,5 @@
         }
       ]
     }
-  ],
-  "version": "3.3.0",
-  "app_version": "3.3.0"
+  ]
 }

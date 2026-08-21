@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>Panel OEE Lakiernia</title>
+    <title>Panel OEE Lakiernia 3.4</title>
     <style>
         /* ZMIENNE Z KOLORAMI DLA OBU TRYBÓW */
         :root {
@@ -1258,7 +1258,7 @@ html[data-theme="light"] body.index2-panel-skin tr:hover,[data-theme="light"] bo
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="OEE Lakiernia">
 <meta name="mobile-web-app-capable" content="yes">
-<meta name="app-version" content="3.2.0">
+<meta name="app-version" content="3.4.0">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="apple-touch-icon" href="icons/icon-192.png">
 <style id="pwa-v32-style">
@@ -1296,8 +1296,23 @@ html[data-theme="light"] body.index2-panel-skin .pareto-chart-v33{background:#ff
 @media(max-width:760px){.pareto-chart-v33{overflow-x:auto}.pareto-chart-v33-plot{min-width:760px;height:270px}.pareto-chart-v33-label{font-size:9px}}
 </style>
 
+
+<style id="app-auto-update-style">
+.app-update-modal{position:fixed;inset:0;z-index:200000;display:none;align-items:center;justify-content:center;padding:18px;background:rgba(2,6,23,.72);backdrop-filter:blur(5px)}.app-update-modal.show{display:flex}.app-update-card{width:min(460px,100%);background:var(--bg-container,#172338);color:var(--text-main,#f8fafc);border:1px solid #38bdf8;border-radius:16px;padding:20px;box-shadow:0 24px 70px rgba(0,0,0,.48)}.app-update-title{font-size:20px;font-weight:1000;color:#38bdf8;margin-bottom:8px}.app-update-copy{font-size:14px;line-height:1.45;color:var(--text-muted,#cbd5e1)}.app-update-version{margin:12px 0;padding:10px;border-radius:10px;background:rgba(56,189,248,.10);border:1px solid rgba(56,189,248,.35);font-weight:900}.app-update-actions{display:grid;grid-template-columns:1fr 1.4fr;gap:9px;margin-top:16px}.app-update-actions button{min-height:44px}.app-update-later{background:#475569;color:#fff}.app-update-now{background:#0284c7;color:#fff}.app-update-now:disabled{opacity:.65;cursor:wait}.app-update-status{min-height:18px;margin-top:10px;font-size:12px;font-weight:800;color:#7dd3fc}@media(max-width:520px){.app-update-actions{grid-template-columns:1fr}}
+</style>
 </head>
-<body><div id="pwaInstallBox" class="pwa-install-box" hidden><button id="pwaInstallButton" type="button">Zainstaluj aplikację</button><button id="pwaCloseButton" class="close" type="button" aria-label="Zamknij">×</button></div>
+<body>
+<div id="appUpdateModal" class="app-update-modal" role="dialog" aria-modal="true" aria-labelledby="appUpdateTitle">
+  <div class="app-update-card">
+    <div id="appUpdateTitle" class="app-update-title">Dostępna aktualizacja aplikacji</div>
+    <div class="app-update-copy">Opublikowano nowszą wersję Panelu OEE. Aktualizacja odświeży pliki aplikacji, ale nie usuwa danych zapisanych w Supabase.</div>
+    <div class="app-update-version"><span id="appUpdateCurrent">Obecna: —</span><br><span id="appUpdateAvailable">Nowa: —</span></div>
+    <div id="appUpdateNotes" class="app-update-copy"></div>
+    <div class="app-update-actions"><button id="appUpdateLater" class="app-update-later" type="button">Później</button><button id="appUpdateNow" class="app-update-now" type="button">Aktualizuj teraz</button></div>
+    <div id="appUpdateStatus" class="app-update-status"></div>
+  </div>
+</div>
+<div id="pwaInstallBox" class="pwa-install-box" hidden><button id="pwaInstallButton" type="button">Zainstaluj aplikację</button><button id="pwaCloseButton" class="close" type="button" aria-label="Zamknij">×</button></div>
 
 
 <div class="container"><nav class="pwa-main-nav" aria-label="Główna nawigacja"><a class="active" href="panel.html">Panel OEE</a><a href="config_panel.html">Przerwy i 6S</a><button type="button" onclick="openConfigModal()">Konfiguracja progów</button></nav>
@@ -1549,7 +1564,7 @@ html[data-theme="light"] body.index2-panel-skin .pareto-chart-v33{background:#ff
 </div>
 
 
-<div class="pwa-version-footer" aria-label="Wersja aplikacji"><span>Wersja 3.3</span></div>
+<div class="pwa-version-footer" aria-label="Wersja aplikacji"><span>Wersja <span id="appVersionText">3.4</span></span></div>
 <div id="sixsConfigModal" class="gema-modal-overlay">
     <div class="gema-modal break-config-modal">
         <div class="gema-modal-header">Konfiguracja zadań 6S</div>
@@ -3778,5 +3793,60 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
 })();
 </script>
 
+
+<script id="app-auto-update-script">
+(function(){
+  'use strict';
+  const CURRENT_APP_VERSION='3.4.0';
+  const VERSION_URL='./version.json';
+  const CHECK_INTERVAL=15*60*1000;
+  let availableVersion=null;
+  function parts(v){return String(v||'0').split('.').map(function(x){return parseInt(x,10)||0})}
+  function newer(remote,local){const a=parts(remote),b=parts(local),n=Math.max(a.length,b.length);for(let i=0;i<n;i++){if((a[i]||0)>(b[i]||0))return true;if((a[i]||0)<(b[i]||0))return false}return false}
+  function setText(id,text){const e=document.getElementById(id);if(e)e.textContent=text}
+  function setDisplayedVersion(v){document.querySelectorAll('#appVersionText').forEach(function(e){e.textContent=String(v).replace(/\.0$/,'')});document.querySelectorAll('meta[name="app-version"]').forEach(function(e){e.content=v})}
+  function showUpdate(info){availableVersion=info;setText('appUpdateCurrent','Obecna: '+CURRENT_APP_VERSION);setText('appUpdateAvailable','Nowa: '+info.version);setText('appUpdateNotes',info.message||'Dostępne są poprawki i ulepszenia.');const m=document.getElementById('appUpdateModal');if(m)m.classList.add('show')}
+  function hideUpdate(){const m=document.getElementById('appUpdateModal');if(m)m.classList.remove('show')}
+  async function checkForUpdate(force){
+    try{
+      const response=await fetch(VERSION_URL+'?t='+Date.now(),{cache:'no-store',headers:{'Cache-Control':'no-cache'}});
+      if(!response.ok)throw new Error('HTTP '+response.status);
+      const info=await response.json();
+      setDisplayedVersion(CURRENT_APP_VERSION);
+      if(info.version&&newer(info.version,CURRENT_APP_VERSION)){
+        const dismissed=sessionStorage.getItem('oee_update_dismissed');
+        if(force||dismissed!==info.version)showUpdate(info);
+        return true;
+      }
+      return false;
+    }catch(err){console.warn('Sprawdzanie aktualizacji:',err);return false}
+  }
+  async function installUpdate(){
+    const btn=document.getElementById('appUpdateNow');if(btn)btn.disabled=true;
+    setText('appUpdateStatus','Pobieranie aktualizacji...');
+    try{
+      if('serviceWorker' in navigator){
+        const reg=await navigator.serviceWorker.getRegistration();
+        if(reg){await reg.update();if(reg.waiting)reg.waiting.postMessage({type:'SKIP_WAITING'})}
+      }
+      try{const keys=await caches.keys();await Promise.all(keys.map(function(k){return caches.delete(k)}))}catch(e){}
+      setText('appUpdateStatus','Aktualizacja gotowa. Ponowne uruchamianie...');
+      setTimeout(function(){location.replace('./panel.html?updated='+Date.now())},700);
+    }catch(err){setText('appUpdateStatus','Nie udało się zaktualizować: '+err.message);if(btn)btn.disabled=false}
+  }
+  function init(){
+    setDisplayedVersion(CURRENT_APP_VERSION);
+    const now=document.getElementById('appUpdateNow'),later=document.getElementById('appUpdateLater');
+    if(now)now.addEventListener('click',installUpdate);
+    if(later)later.addEventListener('click',function(){if(availableVersion)sessionStorage.setItem('oee_update_dismissed',availableVersion.version);hideUpdate()});
+    if('serviceWorker' in navigator)navigator.serviceWorker.addEventListener('controllerchange',function(){location.reload()});
+    setTimeout(function(){checkForUpdate(false)},1800);
+    setInterval(function(){checkForUpdate(false)},CHECK_INTERVAL);
+    document.addEventListener('visibilitychange',function(){if(document.visibilityState==='visible')checkForUpdate(false)});
+    window.checkOeeAppUpdate=function(){return checkForUpdate(true)};
+  }
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
+})();
+</script>
 </body>
 </html>
