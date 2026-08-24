@@ -1,16 +1,17 @@
 {
   "id": "oee-lakiernia-pwa",
-  "name": "Panel OEE Lakiernia 3.6.3",
-  "short_name": "OEE 3.6.3",
-  "description": "Panel OEE Lakiernia 3.6.3.",
+  "name": "Panel OEE Lakiernia 3.6.4",
+  "short_name": "OEE 3.6.4",
+  "description": "Panel OEE Lakiernia z poprawioną nawigacją mobilną.",
   "lang": "pl",
   "start_url": "./panel.html",
   "scope": "./",
   "display": "standalone",
+  "orientation": "any",
   "background_color": "#0f172a",
   "theme_color": "#0f172a",
-  "version": "3.6.3",
-  "app_version": "3.6.3",
+  "version": "3.6.4",
+  "app_version": "3.6.4",
   "icons": [
     {
       "src": "icons/icon-192.png",

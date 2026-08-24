@@ -1,9 +1,9 @@
 {
-  "version": "3.6.3",
-  "displayVersion": "3.6.3",
-  "build": "2026-08-24T08:38:00+02:00",
+  "version": "3.6.4",
+  "displayVersion": "3.6.4",
+  "build": "2026-08-24T09:05:00+02:00",
   "released": "2026-08-24",
-  "message": "Przeniesiono nagłówek aplikacji oraz belkę powiadomień na samą górę, przed nawigację.",
+  "message": "Poprawiono nawigację mobilną: Panel OEE, Przerwy i 6S oraz Konfiguracja progów są wyśrodkowane i zawsze wyświetlane w jednym rzędzie.",
   "minimumVersion": "3.4.0",
   "updateUrl": "./panel.html"
 }

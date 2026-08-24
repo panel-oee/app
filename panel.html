@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>Panel OEE Lakiernia 3.6.3</title>
+    <title>Panel OEE Lakiernia 3.6.4</title>
     <style>
         /* ZMIENNE Z KOLORAMI DLA OBU TRYBÓW */
         :root {
@@ -1258,7 +1258,7 @@ html[data-theme="light"] body.index2-panel-skin tr:hover,[data-theme="light"] bo
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="OEE Lakiernia">
 <meta name="mobile-web-app-capable" content="yes">
-<meta name="app-version" content="3.6.3">
+<meta name="app-version" content="3.6.4">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="apple-touch-icon" href="icons/icon-192.png">
 <style id="pwa-v32-style">
@@ -1301,8 +1301,55 @@ html[data-theme="light"] body.index2-panel-skin .pareto-chart-v33{background:#ff
 .app-update-modal{position:fixed;inset:0;z-index:200000;display:none;align-items:center;justify-content:center;padding:18px;background:rgba(2,6,23,.72);backdrop-filter:blur(5px)}.app-update-modal.show{display:flex}.app-update-card{width:min(460px,100%);background:var(--bg-container,#172338);color:var(--text-main,#f8fafc);border:1px solid #38bdf8;border-radius:16px;padding:20px;box-shadow:0 24px 70px rgba(0,0,0,.48)}.app-update-title{font-size:20px;font-weight:1000;color:#38bdf8;margin-bottom:8px}.app-update-copy{font-size:14px;line-height:1.45;color:var(--text-muted,#cbd5e1)}.app-update-version{margin:12px 0;padding:10px;border-radius:10px;background:rgba(56,189,248,.10);border:1px solid rgba(56,189,248,.35);font-weight:900}.app-update-actions{display:grid;grid-template-columns:1fr 1.4fr;gap:9px;margin-top:16px}.app-update-actions button{min-height:44px}.app-update-later{background:#475569;color:#fff}.app-update-now{background:#0284c7;color:#fff}.app-update-now:disabled{opacity:.65;cursor:wait}.app-update-status{min-height:18px;margin-top:10px;font-size:12px;font-weight:800;color:#7dd3fc}@media(max-width:520px){.app-update-actions{grid-template-columns:1fr}}
 </style>
 
-<style id="app-tools-top-363">.app-tools-top{display:flex;align-items:center;justify-content:space-between;gap:14px;margin:0 0 14px;padding:10px 13px;border:1px solid var(--border-color,#334155);border-radius:12px;background:var(--bg-inputs-flex,#0f172a)}.app-tools-label{display:flex;flex-direction:column;gap:2px}.app-tools-label strong{font-size:12px;color:#38bdf8;text-transform:uppercase}.app-tools-label span{font-size:11px;color:var(--text-muted,#94a3b8);font-weight:700}.app-tools-actions{display:flex;gap:8px;flex-wrap:wrap}.app-tools-actions button{min-width:180px!important}.rc363-btn{background:#7c3aed!important}.rc363-btn.enabled{background:#059669!important}.header-container{margin-top:0!important}.rc363{position:fixed;inset:0;z-index:210000;display:none;align-items:center;justify-content:center;padding:14px;background:rgba(2,6,23,.82)}.rc363.show{display:flex}.rc363-card{width:min(900px,100%);max-height:92vh;overflow:auto;background:var(--bg-container,#172338);border:1px solid #8b5cf6;border-radius:16px;padding:18px;color:var(--text-main,#fff)}.rc363-head{display:flex;justify-content:space-between;gap:10px}.rc363-title{font-size:20px;font-weight:1000;color:#a78bfa}.rc363-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}.rc363-field{display:flex;flex-direction:column;gap:5px}.rc363-field.full{grid-column:1/-1}.rc363-days{display:flex;gap:6px;flex-wrap:wrap}.rc363-days label{padding:6px;border:1px solid var(--border-color,#334155);border-radius:7px}.rc363-actions{display:flex;justify-content:flex-end;gap:8px;margin-top:12px}.rc363-list{display:grid;gap:8px;margin-top:14px}.rc363-row{display:grid;grid-template-columns:70px 1fr 200px;gap:8px;align-items:center;padding:10px;border:1px solid var(--border-color,#334155);border-left:5px solid #8b5cf6;border-radius:9px}.rc363-time{font-size:18px;font-weight:1000;color:#a78bfa}.rc363-sub{font-size:11px;color:var(--text-muted,#94a3b8)}@media(max-width:720px){.app-tools-top{flex-direction:column;align-items:stretch}.app-tools-actions{display:grid;grid-template-columns:1fr 1fr}.app-tools-actions button{min-width:0!important}.rc363-grid{grid-template-columns:1fr}.rc363-field.full{grid-column:auto}.rc363-row{grid-template-columns:1fr}}@media(max-width:480px){.app-tools-actions{grid-template-columns:1fr}}</style></head>
-<body><div id="rc363Modal" class="rc363"><div class="rc363-card"><div class="rc363-head"><div class="rc363-title">Centrum przypomnień 3.6.3</div><button onclick="closeRC363()">Zamknij</button></div><div class="rc363-grid"><input id="rc363Id" type="hidden"><div class="rc363-field"><label>Nazwa</label><input id="rc363Name" placeholder="Raport poranny"></div><div class="rc363-field"><label>Typ</label><select id="rc363Type"><option value="prev">Brak raportu poprzedniego dnia</option><option value="today">Brak raportu dzisiaj</option><option value="sixs">Niewykonane 6S</option><option value="custom">Własne</option></select></div><div class="rc363-field"><label>Godzina</label><input id="rc363Time" type="time" value="08:00"></div><div class="rc363-field"><label>Ponów po minutach</label><input id="rc363Repeat" type="number" min="0" value="0"></div><div class="rc363-field full"><label>Dni</label><div class="rc363-days"><label><input data-d="1" type="checkbox" checked>Pn</label><label><input data-d="2" type="checkbox" checked>Wt</label><label><input data-d="3" type="checkbox" checked>Śr</label><label><input data-d="4" type="checkbox" checked>Cz</label><label><input data-d="5" type="checkbox" checked>Pt</label><label><input data-d="6" type="checkbox">Sb</label><label><input data-d="0" type="checkbox">Nd</label></div></div><div class="rc363-field full"><label>Treść</label><input id="rc363Msg" value="Uzupełnij brakujące dane raportu OEE."></div></div><div class="rc363-actions"><button onclick="testRC363()">Wyślij test</button><button onclick="saveRC363()" style="background:#7c3aed;color:white">Zapisz</button></div><div id="rc363List" class="rc363-list"></div></div></div>
+<style id="app-tools-top-363">.app-tools-top{display:flex;align-items:center;justify-content:space-between;gap:14px;margin:0 0 14px;padding:10px 13px;border:1px solid var(--border-color,#334155);border-radius:12px;background:var(--bg-inputs-flex,#0f172a)}.app-tools-label{display:flex;flex-direction:column;gap:2px}.app-tools-label strong{font-size:12px;color:#38bdf8;text-transform:uppercase}.app-tools-label span{font-size:11px;color:var(--text-muted,#94a3b8);font-weight:700}.app-tools-actions{display:flex;gap:8px;flex-wrap:wrap}.app-tools-actions button{min-width:180px!important}.rc363-btn{background:#7c3aed!important}.rc363-btn.enabled{background:#059669!important}.header-container{margin-top:0!important}.rc363{position:fixed;inset:0;z-index:210000;display:none;align-items:center;justify-content:center;padding:14px;background:rgba(2,6,23,.82)}.rc363.show{display:flex}.rc363-card{width:min(900px,100%);max-height:92vh;overflow:auto;background:var(--bg-container,#172338);border:1px solid #8b5cf6;border-radius:16px;padding:18px;color:var(--text-main,#fff)}.rc363-head{display:flex;justify-content:space-between;gap:10px}.rc363-title{font-size:20px;font-weight:1000;color:#a78bfa}.rc363-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}.rc363-field{display:flex;flex-direction:column;gap:5px}.rc363-field.full{grid-column:1/-1}.rc363-days{display:flex;gap:6px;flex-wrap:wrap}.rc363-days label{padding:6px;border:1px solid var(--border-color,#334155);border-radius:7px}.rc363-actions{display:flex;justify-content:flex-end;gap:8px;margin-top:12px}.rc363-list{display:grid;gap:8px;margin-top:14px}.rc363-row{display:grid;grid-template-columns:70px 1fr 200px;gap:8px;align-items:center;padding:10px;border:1px solid var(--border-color,#334155);border-left:5px solid #8b5cf6;border-radius:9px}.rc363-time{font-size:18px;font-weight:1000;color:#a78bfa}.rc363-sub{font-size:11px;color:var(--text-muted,#94a3b8)}@media(max-width:720px){.app-tools-top{flex-direction:column;align-items:stretch}.app-tools-actions{display:grid;grid-template-columns:1fr 1fr}.app-tools-actions button{min-width:0!important}.rc363-grid{grid-template-columns:1fr}.rc363-field.full{grid-column:auto}.rc363-row{grid-template-columns:1fr}}@media(max-width:480px){.app-tools-actions{grid-template-columns:1fr}}</style><style id="nav-layout-364">
+/* 3.6.4: glowna nawigacja zawsze wycentrowana i w jednym rzedzie */
+.pwa-main-nav{
+  display:grid!important;
+  grid-template-columns:repeat(3,minmax(0,1fr))!important;
+  width:100%!important;
+  max-width:1100px!important;
+  margin:0 auto 18px!important;
+  padding:10px!important;
+  gap:10px!important;
+  align-items:stretch!important;
+  justify-content:center!important;
+}
+.pwa-main-nav>a,.pwa-main-nav>button{
+  width:100%!important;
+  min-width:0!important;
+  min-height:48px!important;
+  margin:0!important;
+  padding:9px 10px!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  text-align:center!important;
+  line-height:1.15!important;
+  white-space:normal!important;
+  overflow-wrap:anywhere!important;
+}
+@media(max-width:620px){
+  .pwa-main-nav{
+    grid-template-columns:repeat(3,minmax(0,1fr))!important;
+    width:100%!important;
+    max-width:none!important;
+    padding:7px!important;
+    gap:6px!important;
+  }
+  .pwa-main-nav>a,.pwa-main-nav>button{
+    min-height:58px!important;
+    padding:7px 4px!important;
+    font-size:clamp(10px,3.15vw,13px)!important;
+    word-break:normal!important;
+    overflow-wrap:break-word!important;
+  }
+}
+@media(max-width:380px){
+  .pwa-main-nav{gap:4px!important;padding:5px!important}
+  .pwa-main-nav>a,.pwa-main-nav>button{font-size:10px!important;padding:6px 2px!important}
+}
+</style></head>
+<body><div id="rc363Modal" class="rc363"><div class="rc363-card"><div class="rc363-head"><div class="rc363-title">Centrum przypomnień 3.6.4</div><button onclick="closeRC363()">Zamknij</button></div><div class="rc363-grid"><input id="rc363Id" type="hidden"><div class="rc363-field"><label>Nazwa</label><input id="rc363Name" placeholder="Raport poranny"></div><div class="rc363-field"><label>Typ</label><select id="rc363Type"><option value="prev">Brak raportu poprzedniego dnia</option><option value="today">Brak raportu dzisiaj</option><option value="sixs">Niewykonane 6S</option><option value="custom">Własne</option></select></div><div class="rc363-field"><label>Godzina</label><input id="rc363Time" type="time" value="08:00"></div><div class="rc363-field"><label>Ponów po minutach</label><input id="rc363Repeat" type="number" min="0" value="0"></div><div class="rc363-field full"><label>Dni</label><div class="rc363-days"><label><input data-d="1" type="checkbox" checked>Pn</label><label><input data-d="2" type="checkbox" checked>Wt</label><label><input data-d="3" type="checkbox" checked>Śr</label><label><input data-d="4" type="checkbox" checked>Cz</label><label><input data-d="5" type="checkbox" checked>Pt</label><label><input data-d="6" type="checkbox">Sb</label><label><input data-d="0" type="checkbox">Nd</label></div></div><div class="rc363-field full"><label>Treść</label><input id="rc363Msg" value="Uzupełnij brakujące dane raportu OEE."></div></div><div class="rc363-actions"><button onclick="testRC363()">Wyślij test</button><button onclick="saveRC363()" style="background:#7c3aed;color:white">Zapisz</button></div><div id="rc363List" class="rc363-list"></div></div></div>
 <div id="appUpdateModal" class="app-update-modal" role="dialog" aria-modal="true" aria-labelledby="appUpdateTitle">
   <div class="app-update-card">
     <div id="appUpdateTitle" class="app-update-title">Dostępna aktualizacja aplikacji</div>
@@ -1565,7 +1612,7 @@ html[data-theme="light"] body.index2-panel-skin .pareto-chart-v33{background:#ff
 </div>
 
 
-<div class="pwa-version-footer" aria-label="Wersja aplikacji"><span>Wersja <span id="appVersionText">3.6.3</span></span></div>
+<div class="pwa-version-footer" aria-label="Wersja aplikacji"><span>Wersja <span id="appVersionText">3.6.4</span></span></div>
 <div id="sixsConfigModal" class="gema-modal-overlay">
     <div class="gema-modal break-config-modal">
         <div class="gema-modal-header">Konfiguracja zadań 6S</div>
@@ -3798,7 +3845,7 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
 <script id="app-auto-update-script">
 (function(){
   'use strict';
-  const CURRENT_APP_VERSION='3.6.3';
+  const CURRENT_APP_VERSION='3.6.4';
   const VERSION_URL='./version.json';
   const CHECK_INTERVAL=15*60*1000;
   let availableVersion=null;
