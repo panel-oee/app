@@ -1,9 +1,9 @@
 {
-  "version": "3.6.2",
-  "displayVersion": "3.6.2",
-  "build": "2026-08-24T08:32:00+02:00",
+  "version": "3.6.3",
+  "displayVersion": "3.6.3",
+  "build": "2026-08-24T08:38:00+02:00",
   "released": "2026-08-24",
-  "message": "Poprawka 3.6.2: przeniesiono przyciski powiadomień i Centrum przypomnień z nagłówka Dashboardu do osobnej, wygodnej belki ustawień.",
+  "message": "Przeniesiono nagłówek aplikacji oraz belkę powiadomień na samą górę, przed nawigację.",
   "minimumVersion": "3.4.0",
   "updateUrl": "./panel.html"
 }

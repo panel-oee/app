@@ -1,16 +1,16 @@
 {
   "id": "oee-lakiernia-pwa",
-  "name": "Panel OEE Lakiernia 3.6.2",
-  "short_name": "OEE 3.6.2",
-  "description": "Panel OEE Lakiernia 3.6.2 z wygodną belką ustawień powiadomień.",
+  "name": "Panel OEE Lakiernia 3.6.3",
+  "short_name": "OEE 3.6.3",
+  "description": "Panel OEE Lakiernia 3.6.3.",
   "lang": "pl",
   "start_url": "./panel.html",
   "scope": "./",
   "display": "standalone",
   "background_color": "#0f172a",
   "theme_color": "#0f172a",
-  "version": "3.6.2",
-  "app_version": "3.6.2",
+  "version": "3.6.3",
+  "app_version": "3.6.3",
   "icons": [
     {
       "src": "icons/icon-192.png",
