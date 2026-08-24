@@ -1,9 +1,9 @@
 {
-  "version": "3.6.0",
-  "displayVersion": "3.6",
-  "build": "2026-08-23T21:45:00+02:00",
-  "released": "2026-08-23",
-  "message": "Wersja 3.6.0: Centrum przypomnień, wiele harmonogramów, typy przypomnień, ponowienia, historia i synchronizacja Supabase z trybem lokalnym.",
+  "version": "3.6.1",
+  "displayVersion": "3.6.1",
+  "build": "2026-08-24T08:25:00+02:00",
+  "released": "2026-08-24",
+  "message": "Poprawka 3.6.1: usunięto stary formularz przypomnienia. Pozostawiono wyłącznie Centrum przypomnień.",
   "minimumVersion": "3.4.0",
   "updateUrl": "./panel.html"
 }
