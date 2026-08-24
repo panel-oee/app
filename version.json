@@ -1,9 +1,9 @@
 {
-  "version": "3.6.1",
-  "displayVersion": "3.6.1",
-  "build": "2026-08-24T08:25:00+02:00",
+  "version": "3.6.2",
+  "displayVersion": "3.6.2",
+  "build": "2026-08-24T08:32:00+02:00",
   "released": "2026-08-24",
-  "message": "Poprawka 3.6.1: usunięto stary formularz przypomnienia. Pozostawiono wyłącznie Centrum przypomnień.",
+  "message": "Poprawka 3.6.2: przeniesiono przyciski powiadomień i Centrum przypomnień z nagłówka Dashboardu do osobnej, wygodnej belki ustawień.",
   "minimumVersion": "3.4.0",
   "updateUrl": "./panel.html"
 }
