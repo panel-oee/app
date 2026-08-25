@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>Panel OEE Lakiernia 3.6.4</title>
+    <title>Panel OEE Lakiernia 3.6.5</title>
     <style>
         /* ZMIENNE Z KOLORAMI DLA OBU TRYBÓW */
         :root {
@@ -1258,7 +1258,7 @@ html[data-theme="light"] body.index2-panel-skin tr:hover,[data-theme="light"] bo
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="OEE Lakiernia">
 <meta name="mobile-web-app-capable" content="yes">
-<meta name="app-version" content="3.6.4">
+<meta name="app-version" content="3.6.5">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="apple-touch-icon" href="icons/icon-192.png">
 <style id="pwa-v32-style">
@@ -1302,7 +1302,7 @@ html[data-theme="light"] body.index2-panel-skin .pareto-chart-v33{background:#ff
 </style>
 
 <style id="app-tools-top-363">.app-tools-top{display:flex;align-items:center;justify-content:space-between;gap:14px;margin:0 0 14px;padding:10px 13px;border:1px solid var(--border-color,#334155);border-radius:12px;background:var(--bg-inputs-flex,#0f172a)}.app-tools-label{display:flex;flex-direction:column;gap:2px}.app-tools-label strong{font-size:12px;color:#38bdf8;text-transform:uppercase}.app-tools-label span{font-size:11px;color:var(--text-muted,#94a3b8);font-weight:700}.app-tools-actions{display:flex;gap:8px;flex-wrap:wrap}.app-tools-actions button{min-width:180px!important}.rc363-btn{background:#7c3aed!important}.rc363-btn.enabled{background:#059669!important}.header-container{margin-top:0!important}.rc363{position:fixed;inset:0;z-index:210000;display:none;align-items:center;justify-content:center;padding:14px;background:rgba(2,6,23,.82)}.rc363.show{display:flex}.rc363-card{width:min(900px,100%);max-height:92vh;overflow:auto;background:var(--bg-container,#172338);border:1px solid #8b5cf6;border-radius:16px;padding:18px;color:var(--text-main,#fff)}.rc363-head{display:flex;justify-content:space-between;gap:10px}.rc363-title{font-size:20px;font-weight:1000;color:#a78bfa}.rc363-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}.rc363-field{display:flex;flex-direction:column;gap:5px}.rc363-field.full{grid-column:1/-1}.rc363-days{display:flex;gap:6px;flex-wrap:wrap}.rc363-days label{padding:6px;border:1px solid var(--border-color,#334155);border-radius:7px}.rc363-actions{display:flex;justify-content:flex-end;gap:8px;margin-top:12px}.rc363-list{display:grid;gap:8px;margin-top:14px}.rc363-row{display:grid;grid-template-columns:70px 1fr 200px;gap:8px;align-items:center;padding:10px;border:1px solid var(--border-color,#334155);border-left:5px solid #8b5cf6;border-radius:9px}.rc363-time{font-size:18px;font-weight:1000;color:#a78bfa}.rc363-sub{font-size:11px;color:var(--text-muted,#94a3b8)}@media(max-width:720px){.app-tools-top{flex-direction:column;align-items:stretch}.app-tools-actions{display:grid;grid-template-columns:1fr 1fr}.app-tools-actions button{min-width:0!important}.rc363-grid{grid-template-columns:1fr}.rc363-field.full{grid-column:auto}.rc363-row{grid-template-columns:1fr}}@media(max-width:480px){.app-tools-actions{grid-template-columns:1fr}}</style><style id="nav-layout-364">
-/* 3.6.4: glowna nawigacja zawsze wycentrowana i w jednym rzedzie */
+/* 3.6.5: glowna nawigacja zawsze wycentrowana i w jednym rzedzie */
 .pwa-main-nav{
   display:grid!important;
   grid-template-columns:repeat(3,minmax(0,1fr))!important;
@@ -1349,7 +1349,7 @@ html[data-theme="light"] body.index2-panel-skin .pareto-chart-v33{background:#ff
   .pwa-main-nav>a,.pwa-main-nav>button{font-size:10px!important;padding:6px 2px!important}
 }
 </style></head>
-<body><div id="rc363Modal" class="rc363"><div class="rc363-card"><div class="rc363-head"><div class="rc363-title">Centrum przypomnień 3.6.4</div><button onclick="closeRC363()">Zamknij</button></div><div class="rc363-grid"><input id="rc363Id" type="hidden"><div class="rc363-field"><label>Nazwa</label><input id="rc363Name" placeholder="Raport poranny"></div><div class="rc363-field"><label>Typ</label><select id="rc363Type"><option value="prev">Brak raportu poprzedniego dnia</option><option value="today">Brak raportu dzisiaj</option><option value="sixs">Niewykonane 6S</option><option value="custom">Własne</option></select></div><div class="rc363-field"><label>Godzina</label><input id="rc363Time" type="time" value="08:00"></div><div class="rc363-field"><label>Ponów po minutach</label><input id="rc363Repeat" type="number" min="0" value="0"></div><div class="rc363-field full"><label>Dni</label><div class="rc363-days"><label><input data-d="1" type="checkbox" checked>Pn</label><label><input data-d="2" type="checkbox" checked>Wt</label><label><input data-d="3" type="checkbox" checked>Śr</label><label><input data-d="4" type="checkbox" checked>Cz</label><label><input data-d="5" type="checkbox" checked>Pt</label><label><input data-d="6" type="checkbox">Sb</label><label><input data-d="0" type="checkbox">Nd</label></div></div><div class="rc363-field full"><label>Treść</label><input id="rc363Msg" value="Uzupełnij brakujące dane raportu OEE."></div></div><div class="rc363-actions"><button onclick="testRC363()">Wyślij test</button><button onclick="saveRC363()" style="background:#7c3aed;color:white">Zapisz</button></div><div id="rc363List" class="rc363-list"></div></div></div>
+<body><div id="rc363Modal" class="rc363"><div class="rc363-card"><div class="rc363-head"><div class="rc363-title">Centrum przypomnień 3.6.5</div><button onclick="closeRC363()">Zamknij</button></div><div class="rc363-grid"><input id="rc363Id" type="hidden"><div class="rc363-field"><label>Nazwa</label><input id="rc363Name" placeholder="Raport poranny"></div><div class="rc363-field"><label>Typ</label><select id="rc363Type"><option value="prev">Brak raportu poprzedniego dnia</option><option value="today">Brak raportu dzisiaj</option><option value="sixs">Niewykonane 6S</option><option value="custom">Własne</option></select></div><div class="rc363-field"><label>Godzina</label><input id="rc363Time" type="time" value="08:00"></div><div class="rc363-field"><label>Ponów po minutach</label><input id="rc363Repeat" type="number" min="0" value="0"></div><div class="rc363-field full"><label>Dni</label><div class="rc363-days"><label><input data-d="1" type="checkbox" checked>Pn</label><label><input data-d="2" type="checkbox" checked>Wt</label><label><input data-d="3" type="checkbox" checked>Śr</label><label><input data-d="4" type="checkbox" checked>Cz</label><label><input data-d="5" type="checkbox" checked>Pt</label><label><input data-d="6" type="checkbox">Sb</label><label><input data-d="0" type="checkbox">Nd</label></div></div><div class="rc363-field full"><label>Treść</label><input id="rc363Msg" value="Uzupełnij brakujące dane raportu OEE."></div></div><div class="rc363-actions"><button onclick="testRC363()">Wyślij test</button><button onclick="saveRC363()" style="background:#7c3aed;color:white">Zapisz</button></div><div id="rc363List" class="rc363-list"></div></div></div>
 <div id="appUpdateModal" class="app-update-modal" role="dialog" aria-modal="true" aria-labelledby="appUpdateTitle">
   <div class="app-update-card">
     <div id="appUpdateTitle" class="app-update-title">Dostępna aktualizacja aplikacji</div>
@@ -1612,7 +1612,7 @@ html[data-theme="light"] body.index2-panel-skin .pareto-chart-v33{background:#ff
 </div>
 
 
-<div class="pwa-version-footer" aria-label="Wersja aplikacji"><span>Wersja <span id="appVersionText">3.6.4</span></span></div>
+<div class="pwa-version-footer" aria-label="Wersja aplikacji"><span>Wersja <span id="appVersionText">3.6.5</span></span></div>
 <div id="sixsConfigModal" class="gema-modal-overlay">
     <div class="gema-modal break-config-modal">
         <div class="gema-modal-header">Konfiguracja zadań 6S</div>
@@ -2128,7 +2128,7 @@ html[data-theme="light"] body.index2-panel-skin .pareto-chart-v33{background:#ff
         try {
             const { data, error } = await supabaseClient
                 .from('oee_config')
-                .select('*')
+                .select('id,target,green_min,yellow_min,chart_guides,critical_guide,target_color,critical_color')
                 .eq('id', 1)
                 .single();
 
@@ -2263,7 +2263,9 @@ html[data-theme="light"] body.index2-panel-skin .pareto-chart-v33{background:#ff
         try {
             const { data, error } = await supabaseClient
                 .from('oee_reports')
-                .select('*')
+                .select('date,target_speed,breakdown,cleaning,service,bad,m_start,m_end,pcs_start,pcs_end,h_start,h_end,meters,pieces,av,perf,qual,oee,notes')
+                .gte('date', startOfRange)
+                .lte('date', endOfRange)
                 .order('date', { ascending: true });
 
             if (error) throw error;
@@ -2360,7 +2362,7 @@ html[data-theme="light"] body.index2-panel-skin .pareto-chart-v33{background:#ff
         const tbody = document.querySelector('#sixsOperatorsTable tbody');
         if (!tbody) return;
         tbody.innerHTML = '<tr><td colspan="3">Ładowanie operatorów...</td></tr>';
-        const { data, error } = await supabaseClient.from('sixs_operators').select('*').order('operator_name');
+        const { data, error } = await supabaseClient.from('sixs_operators').select('id,operator_name,group_id,active').order('operator_name');
         if (error) {
             tbody.innerHTML = '<tr><td colspan="3">Błąd: ' + escapeHtml(error.message) + '</td></tr>';
             sixsMsg('Błąd pobierania operatorów: ' + error.message, true);
@@ -2407,7 +2409,7 @@ html[data-theme="light"] body.index2-panel-skin .pareto-chart-v33{background:#ff
         if (!tbody) return;
         const selected = sixsSelectedBreak();
         tbody.innerHTML = '<tr><td colspan="5">Ładowanie zadań...</td></tr>';
-        const { data, error } = await supabaseClient.from('sixs_tasks_config').select('*').order('sort_order');
+        const { data, error } = await supabaseClient.from('sixs_tasks_config').select('id,task_name,description,area,frequency,timing,recurrence_anchor,monthly_mode,month_day,shift,sixs_start,days,sort_order,active').order('sort_order');
         if (error) {
             tbody.innerHTML = '<tr><td colspan="5">Błąd: ' + escapeHtml(error.message) + '</td></tr>';
             sixsMsg('Błąd pobierania zadań: ' + error.message, true);
@@ -2475,7 +2477,7 @@ html[data-theme="light"] body.index2-panel-skin .pareto-chart-v33{background:#ff
         const logDate = dateEl && dateEl.value ? dateEl.value : formatDateKey(new Date());
         const shift = (document.getElementById('sixsHistoryShift') || {}).value || 'all';
         tbody.innerHTML = '<tr><td colspan="8">Ładowanie historii...</td></tr>';
-        let query = supabaseClient.from('sixs_task_logs').select('*').eq('log_date', logDate).order('updated_at', { ascending: false });
+        let query = supabaseClient.from('sixs_task_logs').select('id,log_date,shift,sixs_start,task_id,task_name,operator_id,operator_name,status,comment,created_at,updated_at').eq('log_date', logDate).order('updated_at', { ascending: false });
         if (shift !== 'all') query = query.eq('shift', shift);
         const { data, error } = await query;
         if (error) {
@@ -3753,7 +3755,7 @@ function monthRecordsV30(){if(typeof directorCurrentMonthRecords==='function')re
 function monthStats(){var recs=monthRecordsV30();var sum=0,count=0,best=null,worst=null;recs.forEach(function(x){var o=parseFloat(x.rec&&x.rec.oee);if(!isNaN(o)&&o>0){sum+=o;count++;if(!best||o>best.oee)best={oee:o,date:x.date,key:x.key};if(!worst||o<worst.oee)worst={oee:o,date:x.date,key:x.key};}});return{avg:count?sum/count:null,count:count,best:best,worst:worst}}
 function forecastOee(){var st=monthStats();return st.avg}
 function updateTodayDashboard(){try{var st=monthStats();var avg=st.avg;safeSet('todayMonthOee',fmtPct(avg));safeSet('todayMonthOeeSub',(st.count||0)+' zapisanych dni');setCardStatus('todayMonthOeeCard',avg===null?'':(avg>=((window.OEE_CONFIG||{}).greenMin||70)?'good':(avg>=((window.OEE_CONFIG||{}).yellowMin||60)?'warn':'alert')));var sh=currentShiftInfo();safeSet('todayShift',sh.label);safeSet('todayShiftSub','Pozostało: '+formatDuration(sh.remain));setCardStatus('todayShiftCard','good');var nb=nextBreakInfo();if(nb){var br=nb.br;safeSet('todayNextBreak',String(br.start||'—'));safeSet('todayNextBreakSub',(br.kind==='6S'?'6S':'Przerwa')+' • '+(shiftFromBreak(br)==='all'?'wszystkie zmiany':'zmiana '+shiftFromBreak(br))+' • za '+formatDuration(nb.dt-new Date()));setCardStatus('todayNextBreakCard',br.kind==='6S'?'warn':'good')}else{safeSet('todayNextBreak','—');safeSet('todayNextBreakSub','Brak kolejnej przerwy');setCardStatus('todayNextBreakCard','')}var noFail=typeof directorDaysNoFailure==='function'?directorDaysNoFailure(monthRecordsV30()):null;safeSet('todayNoFailure',noFail===null?'—':String(noFail));setCardStatus('todayNoFailureCard2',noFail>=30?'good':(noFail>=20?'warn':'alert'));var yKey=previousWorkdayKey();var exists=!!(window.gemaBazaDanych&&gemaBazaDanych[yKey]);safeSet('todayReportStatus',exists?'Zapisany':'Brak');safeSet('todayReportSub',yKey);setCardStatus('todayReportCard',exists?'good':'alert');var fc=forecastOee();safeSet('todayForecastOee',fmtPct(fc));safeSet('todayForecastSub','Jeśli trend miesiąca się utrzyma');setCardStatus('todayForecastCard',fc===null?'':(fc>=((window.OEE_CONFIG||{}).target||70)?'good':(fc>=((window.OEE_CONFIG||{}).yellowMin||60)?'warn':'alert')));if(st.best&&st.worst){var b=st.best.date,w=st.worst.date;safeSet('todayBestWorst',pad(b.getDate())+'.'+pad(b.getMonth()+1)+' / '+pad(w.getDate())+'.'+pad(w.getMonth()+1));safeSet('todayBestWorstSub','Najlepszy '+fmtPct(st.best.oee)+' • najgorszy '+fmtPct(st.worst.oee));setCardStatus('todayBestWorstCard','warn')}else{safeSet('todayBestWorst','—');safeSet('todayBestWorstSub','Brak danych');setCardStatus('todayBestWorstCard','')}safeSet('todayDashboardUpdated','Aktualizacja: '+pad(new Date().getHours())+':'+pad(new Date().getMinutes())+':'+pad(new Date().getSeconds()));renderParetoLossesV30();updateNotificationButton();}catch(e){console.warn('Dashboard v3:',e)}}
-async function refreshSixsToday(){try{if(!window.supabaseClient)return;var key=typeof formatDateKey==='function'?formatDateKey(new Date()):new Date().toISOString().slice(0,10);var q=await supabaseClient.from('sixs_task_logs').select('status').eq('log_date',key);if(q.error)throw q.error;var rows=q.data||[];var done=rows.filter(function(r){return String(r.status||'').toLowerCase()==='done'}).length;SIXS_CACHE={done:done,total:rows.length,error:''};safeSet('todaySixs',rows.length?done+' / '+rows.length:'—');safeSet('todaySixsSub',rows.length?'Wykonane wpisy z historii':'Brak odkliknięć dzisiaj');setCardStatus('todaySixsCard',rows.length?(done===rows.length?'good':'warn'):'');}catch(e){SIXS_CACHE.error=e.message;safeSet('todaySixs','—');safeSet('todaySixsSub','Brak połączenia z historią 6S');setCardStatus('todaySixsCard','alert')}}
+async function refreshSixsToday(){if(document.visibilityState==='hidden')return;try{if(!window.supabaseClient)return;var key=typeof formatDateKey==='function'?formatDateKey(new Date()):new Date().toISOString().slice(0,10);var q=await supabaseClient.from('sixs_task_logs').select('status').eq('log_date',key);if(q.error)throw q.error;var rows=q.data||[];var done=rows.filter(function(r){return String(r.status||'').toLowerCase()==='done'}).length;SIXS_CACHE={done:done,total:rows.length,error:''};safeSet('todaySixs',rows.length?done+' / '+rows.length:'—');safeSet('todaySixsSub',rows.length?'Wykonane wpisy z historii':'Brak odkliknięć dzisiaj');setCardStatus('todaySixsCard',rows.length?(done===rows.length?'good':'warn'):'');}catch(e){SIXS_CACHE.error=e.message;safeSet('todaySixs','—');safeSet('todaySixsSub','Brak połączenia z historią 6S');setCardStatus('todaySixsCard','alert')}}
 function renderParetoLossesV30(){try{var losses=typeof directorPareto==='function'?directorPareto(monthRecordsV30()):[];var total=losses.reduce(function(s,x){return s+(parseFloat(x.minutes)||0)},0);if(!losses.length||!total){safeHtml('paretoLossesList','<div class="pareto-empty">Brak strat w bieżącym miesiącu albo brak zapisanych raportów.</div>');safeSet('paretoSingleLoss','—');safeSet('paretoSingleLossSub','Bieżący miesiąc');safeSet('paretoTop80','—');safeSet('paretoTop80Sub','Brak danych');safeSet('paretoTotalLoss','0 min');return}var cum=0, html='',top80=[];losses.forEach(function(x,i){cum+=parseFloat(x.minutes)||0;var pct=total?((x.minutes/total)*100):0;var cp=total?((cum/total)*100):0;if(cp<=80||top80.length===0)top80.push(x.category);html+='<div class="pareto-row"><div class="pareto-name" title="'+escapeHtml(String(x.category||''))+'">'+(i+1)+'. '+escapeHtml(String(x.category||''))+'</div><div class="pareto-bar-track"><div class="pareto-bar" style="width:'+Math.max(4,Math.min(100,pct)).toFixed(1)+'%"></div></div><div class="pareto-min">'+Math.round(x.minutes)+' min</div><div class="pareto-cum">'+cp.toFixed(0)+'%</div></div>';});safeHtml('paretoLossesList',html);safeSet('paretoTop80',String(top80.length)+' przycz.');safeSet('paretoTop80Sub',top80.join(', '));safeSet('paretoTotalLoss',Math.round(total)+' min');var single=biggestSingleLoss();safeSet('paretoSingleLoss',single?single.label:'—');safeSet('paretoSingleLossSub',single?single.sub:'Bieżący miesiąc');}catch(e){console.warn('Pareto v3:',e)}}
 function biggestSingleLoss(){var recs=monthRecordsV30(),best=null;recs.forEach(function(x){var r=x.rec||{};var checks=[{cat:typeof directorExtractCategory==='function'?directorExtractCategory(r.notes||''):'Awaria',min:parseFloat(r.breakdown)||0},{cat:'Zmiana koloru',min:parseFloat(r.cleaning)||0},{cat:'Serwis',min:parseFloat(r.service)||0}];checks.forEach(function(c){if(c.min>0&&(!best||c.min>best.min)){best={min:c.min,cat:c.cat,date:x.date}}})});if(!best)return null;return{label:Math.round(best.min)+' min',sub:(best.cat||'Strata')+' • '+pad(best.date.getDate())+'.'+pad(best.date.getMonth()+1)+'.'+best.date.getFullYear()}}
 function toast(title,body){var el=$('notificationToast');if(!el)return;el.innerHTML=escapeHtml(title)+'<small>'+escapeHtml(body||'')+'</small>';el.classList.add('show');setTimeout(function(){el.classList.remove('show')},6500)}
@@ -3764,7 +3766,7 @@ function updateNotificationButton(){var btn=$('notificationToggleBtn');if(!btn)r
 function sendNotification(title,body,tag){toast(title,body);if(!canNotify())return;try{navigator.serviceWorker&&navigator.serviceWorker.ready?navigator.serviceWorker.ready.then(function(reg){reg.showNotification(title,{body:body,tag:tag,icon:'icons/icon-192.png',badge:'icons/icon-192.png',renotify:false})}):new Notification(title,{body:body,tag:tag,icon:'icons/icon-192.png'})}catch(e){console.warn('Notification:',e)}}
 function checkBreakAlerts(){if(localStorage.getItem('oee_v30_notifications')!=='1'&&!canNotify())return;var nbAll=(Array.isArray(window.BREAK_SCHEDULE)?window.BREAK_SCHEDULE:[]);var now=new Date(),todayKey=typeof formatDateKey==='function'?formatDateKey(now):now.toISOString().slice(0,10);nbAll.forEach(function(br){if(!br||br.enabled===false)return;if(Array.isArray(br.days)&&br.days.length&&!br.days.map(Number).includes(now.getDay()))return;var dt=getBreakDateTime(br,now,0),diff=Math.round((dt-now)/60000);var desc=(br.kind==='6S'?'Czas 6S':'Przerwa')+' • '+(shiftFromBreak(br)==='all'?'wszystkie zmiany':'zmiana '+shiftFromBreak(br))+' • '+br.start;if(diff===5){var k=notificationKey('break5_'+br.start,todayKey);if(!localStorage.getItem(k)){localStorage.setItem(k,'1');sendNotification((br.kind==='6S'?'🧹 6S za 5 minut':'⏱ Przerwa za 5 minut'),desc,k)}}if(diff===0){var k2=notificationKey('break0_'+br.start,todayKey);if(!localStorage.getItem(k2)){localStorage.setItem(k2,'1');sendNotification((br.kind==='6S'?'🧹 Rozpoczyna się czas 6S':'⏱ Rozpoczyna się przerwa'),desc,k2)}}});var h=now.getHours(),m=now.getMinutes();if(h===21&&m>=50){var yKey=previousWorkdayKey();if(window.gemaBazaDanych&&!gemaBazaDanych[yKey]){var rk=notificationKey('report_'+yKey,todayKey);if(!localStorage.getItem(rk)){localStorage.setItem(rk,'1');sendNotification('📋 Brak raportu OEE','Nie zapisano raportu za '+yKey,rk)}}}if(SIXS_CACHE.total&&SIXS_CACHE.done<SIXS_CACHE.total){var sk=notificationKey('sixs_incomplete',todayKey);if(!localStorage.getItem(sk)){localStorage.setItem(sk,'1');sendNotification('⚠ Nie wykonano wszystkich zadań 6S',SIXS_CACHE.done+' / '+SIXS_CACHE.total+' wykonanych',sk)}}}
 function wrapAfter(name, fn){var old=window[name];if(typeof old==='function'&&!old.__v30Wrapped){var wrapped=function(){var r=old.apply(this,arguments);setTimeout(fn,80);return r};wrapped.__v30Wrapped=true;window[name]=wrapped}}
-function initV30(){wrapAfter('renderTableAndChart',function(){updateTodayDashboard();refreshSixsToday()});wrapAfter('calculateWeeklyAverageFromDay',updateTodayDashboard);wrapAfter('selectDay',updateTodayDashboard);wrapAfter('changeMonth',function(){setTimeout(function(){updateTodayDashboard();refreshSixsToday()},250)});updateNotificationButton();updateTodayDashboard();refreshSixsToday();if(dashboardTimer)clearInterval(dashboardTimer);dashboardTimer=setInterval(updateTodayDashboard,1000);if(sixsRefreshTimer)clearInterval(sixsRefreshTimer);sixsRefreshTimer=setInterval(refreshSixsToday,120000);if(notifyTimer)clearInterval(notifyTimer);notifyTimer=setInterval(checkBreakAlerts,30000);setTimeout(checkBreakAlerts,3000)}
+function initV30(){wrapAfter('renderTableAndChart',function(){updateTodayDashboard();refreshSixsToday()});wrapAfter('calculateWeeklyAverageFromDay',updateTodayDashboard);wrapAfter('selectDay',updateTodayDashboard);wrapAfter('changeMonth',function(){setTimeout(function(){updateTodayDashboard();refreshSixsToday()},250)});updateNotificationButton();updateTodayDashboard();refreshSixsToday();if(dashboardTimer)clearInterval(dashboardTimer);dashboardTimer=setInterval(updateTodayDashboard,1000);if(sixsRefreshTimer)clearInterval(sixsRefreshTimer);sixsRefreshTimer=setInterval(refreshSixsToday,300000);if(notifyTimer)clearInterval(notifyTimer);notifyTimer=setInterval(checkBreakAlerts,30000);setTimeout(checkBreakAlerts,3000)}
 window.renderParetoLossesV30=renderParetoLossesV30;
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',initV30);else initV30();
 })();
@@ -3845,7 +3847,7 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
 <script id="app-auto-update-script">
 (function(){
   'use strict';
-  const CURRENT_APP_VERSION='3.6.4';
+  const CURRENT_APP_VERSION='3.6.5';
   const VERSION_URL='./version.json';
   const CHECK_INTERVAL=15*60*1000;
   let availableVersion=null;
