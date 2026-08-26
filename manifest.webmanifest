@@ -2,7 +2,7 @@
   "id": "oee-lakiernia-pwa",
   "name": "Panel OEE Lakiernia 3.6.5",
   "short_name": "OEE 3.6.5",
-  "description": "Panel OEE Lakiernia z ograniczonym transferem Supabase.",
+  "description": "Panel OEE Lakiernia 3.6.5 zoptymalizowany pod kątem Egress Supabase.",
   "lang": "pl",
   "start_url": "./panel.html",
   "scope": "./",
