@@ -1,7 +1,7 @@
 {
   "id": "oee-lakiernia-pwa",
-  "name": "Panel OEE Lakiernia 3.6.5",
-  "short_name": "OEE 3.6.5",
+  "name": "Panel OEE Lakiernia 3.7.0",
+  "short_name": "OEE 3.7.0",
   "description": "Panel OEE Lakiernia 3.6.5 zoptymalizowany pod kątem Egress Supabase.",
   "lang": "pl",
   "start_url": "./panel.html",
@@ -10,8 +10,8 @@
   "orientation": "any",
   "background_color": "#0f172a",
   "theme_color": "#0f172a",
-  "version": "3.6.5",
-  "app_version": "3.6.5",
+  "version": "3.7.0",
+  "app_version": "3.7.0",
   "icons": [
     {
       "src": "icons/icon-192.png",
