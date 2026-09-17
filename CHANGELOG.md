@@ -1,10 +1,8 @@
-# Changelog 3.7.0
+# Changelog 3.7.1
 
-- Przywrócono pełny Dashboard dzisiaj z 3.6.5.
-- Przywrócono analizę i wykres Pareto.
-- Przywrócono instalator PWA, pełne aktualizacje, powiadomienia i Centrum przypomnień.
-- Zachowano trzyprzyciskową nawigację w jednym rzędzie także na telefonie.
-- Dodano nową obsługę `downtime_minutes` z pliku bazowego.
-- Dodano dynamiczną etykietę czasu przestoju i walidacje kategorii.
-- Zachowano zoptymalizowany zakres zapytań Supabase.
-- Zachowano rozszerzone pola grup operatorów i cykliczności zadań 6S.
+- Zmieniono numer wydania, aby aplikacja 3.7.0 wykryła aktualizację.
+- Wymuszono pobieranie `version.json` bez pamięci podręcznej.
+- Pareto liczy czas przezbrojeń bezpośrednio z pola `Czyszczenie kabiny (minuty)`.
+- Liczba przezbrojeń pochodzi z pola `Ilość przezbrojeń/dzień`.
+- Przezbrojenia nie zależą od pola `Sztuki wadliwe (poprawki)`.
+- Usunięto ograniczenie rankingu Pareto do pięciu pozycji.

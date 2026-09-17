@@ -1,8 +1,8 @@
 {
-  "version": "3.7.0",
-  "displayVersion": "3.7.0",
+  "version": "3.7.1",
+  "displayVersion": "3.7.1",
   "released": "2026-09-17",
-  "message": "Pełna wersja 3.7.0: Dashboard dzisiaj, Pareto, powiadomienia, Centrum przypomnień oraz nowa obsługa czasu przestojów.",
-  "minimumVersion": "3.6.5",
+  "message": "Poprawka aktualizacji PWA i Pareto: przezbrojenia są liczone z czasu czyszczenia niezależnie od sztuk wadliwych.",
+  "minimumVersion": "3.7.0",
   "updateUrl": "./panel.html"
 }
