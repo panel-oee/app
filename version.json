@@ -1,8 +1,8 @@
 {
-  "version": "3.8.5",
-  "displayVersion": "3.8.5",
+  "version": "3.8.6",
+  "displayVersion": "3.8.6",
   "released": "2026-11-02",
-  "message": "Oddzielono dane formularza zmiany od zbiorczych danych kalendarza i wykresu; przywrócono wszystkie wcześniejsze wyniki.",
-  "minimumVersion": "3.8.4",
+  "message": "Naprawiono pierwsze renderowanie kalendarza i wykresu. Dane są widoczne natychmiast, bez przechodzenia do poprzedniego miesiąca.",
+  "minimumVersion": "3.8.5",
   "updateUrl": "./panel.html"
 }
