@@ -1,7 +1,7 @@
-# Changelog 3.8.3
+# Changelog 3.8.5
 
-- Usunięto odwołanie do nieistniejącego `assets/quantum-forge.css`, które powodowało błędy 404.
-- Style niezbędne do wykresu pozostają osadzone bezpośrednio w `panel.html`.
-- Przywrócono bezpieczne `select('*')` dla zgodności ze schematem Supabase, pozostawiając filtrowanie daty i zmiany.
-- Dodano widoczny komunikat diagnostyczny, jeśli pobieranie danych wykresu zakończy się błędem.
-- Zachowano aktualizacje PWA i powiadomienia lokalne.
+- Oryginalny odczyt danych wybranej zmiany pozostawiono bez zmian dla formularza.
+- Dodano drugi, niezależny odczyt obu zmian dla kalendarza, kart okresowych, historii i wykresu miesięcznego.
+- Starsze dane po migracji 3→2 zmiany są widoczne w podsumowaniu.
+- Dwa raporty jednego dnia są łączone do jednego wyniku dziennego przez średnią OEE obu zmian.
+- Wykres nie zależy od aktualnie wybranej zmiany w formularzu.

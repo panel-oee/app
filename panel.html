@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>Panel OEE Lakiernia 3.8.3</title>
+    <title>Panel OEE Lakiernia 3.8.5</title>
 <!-- OEE FAVICON START -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%3E%0A%20%20%3Ccircle%20cx%3D%2232%22%20cy%3D%2232%22%20r%3D%2225%22%20fill%3D%22none%22%20stroke%3D%22%230b5575%22%20stroke-width%3D%2213%22%0A%20%20%20%20%20%20%20%20%20%20stroke-dasharray%3D%2245%20112%22%20stroke-dashoffset%3D%220%22%20transform%3D%22rotate%28-90%2032%2032%29%22%2F%3E%0A%20%20%3Ccircle%20cx%3D%2232%22%20cy%3D%2232%22%20r%3D%2225%22%20fill%3D%22none%22%20stroke%3D%22%23ff9f1c%22%20stroke-width%3D%2213%22%0A%20%20%20%20%20%20%20%20%20%20stroke-dasharray%3D%2245%20112%22%20stroke-dashoffset%3D%22-52%22%20transform%3D%22rotate%28-90%2032%2032%29%22%2F%3E%0A%20%20%3Ccircle%20cx%3D%2232%22%20cy%3D%2232%22%20r%3D%2225%22%20fill%3D%22none%22%20stroke%3D%22%23f43f2e%22%20stroke-width%3D%2213%22%0A%20%20%20%20%20%20%20%20%20%20stroke-dasharray%3D%2245%20112%22%20stroke-dashoffset%3D%22-104%22%20transform%3D%22rotate%28-90%2032%2032%29%22%2F%3E%0A%20%20%3Ccircle%20cx%3D%2232%22%20cy%3D%2232%22%20r%3D%2217%22%20fill%3D%22%23243445%22%2F%3E%0A%20%20%3Ctext%20x%3D%2232%22%20y%3D%2237%22%20text-anchor%3D%22middle%22%20font-family%3D%22Arial%2Csans-serif%22%0A%20%20%20%20%20%20%20%20font-size%3D%2214%22%20font-weight%3D%22700%22%20letter-spacing%3D%220.5%22%20fill%3D%22%23ffffff%22%3EOEE%3C%2Ftext%3E%0A%3C%2Fsvg%3E">
   <link rel="shortcut icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%3E%0A%20%20%3Ccircle%20cx%3D%2232%22%20cy%3D%2232%22%20r%3D%2225%22%20fill%3D%22none%22%20stroke%3D%22%230b5575%22%20stroke-width%3D%2213%22%0A%20%20%20%20%20%20%20%20%20%20stroke-dasharray%3D%2245%20112%22%20stroke-dashoffset%3D%220%22%20transform%3D%22rotate%28-90%2032%2032%29%22%2F%3E%0A%20%20%3Ccircle%20cx%3D%2232%22%20cy%3D%2232%22%20r%3D%2225%22%20fill%3D%22none%22%20stroke%3D%22%23ff9f1c%22%20stroke-width%3D%2213%22%0A%20%20%20%20%20%20%20%20%20%20stroke-dasharray%3D%2245%20112%22%20stroke-dashoffset%3D%22-52%22%20transform%3D%22rotate%28-90%2032%2032%29%22%2F%3E%0A%20%20%3Ccircle%20cx%3D%2232%22%20cy%3D%2232%22%20r%3D%2225%22%20fill%3D%22none%22%20stroke%3D%22%23f43f2e%22%20stroke-width%3D%2213%22%0A%20%20%20%20%20%20%20%20%20%20stroke-dasharray%3D%2245%20112%22%20stroke-dashoffset%3D%22-104%22%20transform%3D%22rotate%28-90%2032%2032%29%22%2F%3E%0A%20%20%3Ccircle%20cx%3D%2232%22%20cy%3D%2232%22%20r%3D%2217%22%20fill%3D%22%23243445%22%2F%3E%0A%20%20%3Ctext%20x%3D%2232%22%20y%3D%2237%22%20text-anchor%3D%22middle%22%20font-family%3D%22Arial%2Csans-serif%22%0A%20%20%20%20%20%20%20%20font-size%3D%2214%22%20font-weight%3D%22700%22%20letter-spacing%3D%220.5%22%20fill%3D%22%23ffffff%22%3EOEE%3C%2Ftext%3E%0A%3C%2Fsvg%3E">
@@ -1262,10 +1262,10 @@ select option, select optgroup { background-color: #111827 !important; color: #f
 html[data-theme="light"] select { color-scheme: light; }
 html[data-theme="light"] select option, html[data-theme="light"] select optgroup { background-color: #ffffff !important; color: #0f172a !important; }
 </style>
-<meta name="theme-color" content="#0f172a"><meta name="app-version" content="3.8.3"><link rel="manifest" href="manifest.webmanifest"><link rel="apple-touch-icon" href="icons/icon-192.png"><style id="pwa383-style">.app383-nav{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px;margin:0 0 12px;padding:7px;border:1px solid var(--border-color,#334155);border-radius:12px;background:var(--bg-inputs-flex,#0f172a)}.app383-nav a,.app383-nav button{display:flex;align-items:center;justify-content:center;text-align:center;min-width:0;min-height:48px;padding:7px!important;border:0;border-radius:9px;background:#475569;color:#fff;text-decoration:none;font-weight:900}.app383-nav .active{background:#2563eb}.app383-tools{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:14px;padding:9px 11px;border:1px solid var(--border-color,#334155);border-radius:12px;background:var(--bg-inputs-flex,#0f172a)}.app383-actions{display:flex;gap:6px;flex-wrap:wrap}.app383-actions button{background:#475569;color:#fff;min-height:40px}.app383-version{width:max-content;margin:18px auto 0;padding:5px 12px;border:1px solid #38bdf8;border-radius:999px;color:#7dd3fc;background:#0f172a;font:900 11px system-ui}.app383-modal{position:fixed;inset:0;display:none;align-items:center;justify-content:center;z-index:260000;background:rgba(2,6,23,.8);padding:16px}.app383-modal.show{display:flex}.app383-card{width:min(470px,100%);padding:20px;border:1px solid #38bdf8;border-radius:16px;background:#172338;color:#fff}.app383-card-actions{display:flex;justify-content:flex-end;gap:8px;margin-top:14px}@media(max-width:680px){.app383-nav{grid-template-columns:repeat(3,minmax(0,1fr));gap:4px}.app383-nav a,.app383-nav button{font-size:clamp(10px,3vw,13px);min-height:56px;padding:4px!important;white-space:normal}.app383-tools{flex-direction:column;align-items:stretch}.app383-actions{display:grid;grid-template-columns:1fr 1fr}.app383-actions button:last-child{grid-column:1/-1}}</style></head>
-<body><div id="update383" class="app383-modal"><div class="app383-card"><h3>Dostępna aktualizacja</h3><div id="update383Text"></div><div class="app383-card-actions"><button onclick="document.getElementById('update383').classList.remove('show')">Później</button><button onclick="installUpdate383()">Aktualizuj teraz</button></div></div></div>
+<meta name="app-version" content="3.8.5"><link rel="manifest" href="manifest.webmanifest"><style>.db385{display:none;margin:0 0 12px;padding:9px;border:1px solid #10b981;border-radius:9px;color:#bbf7d0;font-weight:800;font-size:12px}.v385{width:max-content;margin:18px auto 0;padding:5px 12px;border:1px solid #38bdf8;border-radius:999px;color:#7dd3fc;background:#0f172a}</style></head>
+<body>
 
-<div class="container"><nav class="app383-nav"><a class="active" href="panel.html">Panel OEE</a><a href="config_panel.html">Przerwy i 6S</a><button type="button" onclick="openConfigModal()">Konfiguracja progów</button></nav><div class="app383-tools"><div><strong>Powiadomienia i aktualizacje</strong><div id="app383Status" style="font-size:11px;color:#94a3b8">Wersja 3.8.3</div></div><div class="app383-actions"><button onclick="enableNotifications383()" id="notify383">Włącz powiadomienia</button><button onclick="testNotification383()">Test</button><button onclick="checkUpdate383(true)">Sprawdź aktualizację</button></div></div><div id="app383Error" style="display:none;margin:10px 0;padding:10px;border:1px solid #ef4444;border-radius:10px;background:rgba(239,68,68,.1);color:#fecaca;font-weight:800"></div>
+<div class="container"><div id="db385Status" class="db385"></div>
     <div class="header-container">
         <h2>Miesięczny Panel OEE - Lakiernia</h2>
         <div class="header-controls">
@@ -1707,10 +1707,10 @@ html[data-theme="light"] select option, html[data-theme="light"] select optgroup
         var hint = document.getElementById('shiftCloseWindow');
         if (hint) hint.textContent = 'Zamknięcie: ' + meta.start + '-' + meta.end;
         hasUnsavedChanges = false;
+        await loadSummaryDataFromSupabase();
         await loadDataFromSupabase();
-        buildCalendar();
+        withSummaryData(function(){ buildCalendar(); renderTableAndChart(); });
         selectDay(selectedDayGlobal);
-        renderTableAndChart();
     }
 
     const MONTH_NAMES = ["Styczeń", "Luty", "Marzec", "Kwiecień", "Maj", "Czerwiec", "Lipiec", "Sierpień", "Wrzesień", "Październik", "Listopad", "Grudzień"];
@@ -1956,43 +1956,10 @@ html[data-theme="light"] select option, html[data-theme="light"] select optgroup
 
     function directorIsMachineFailure(note){const c=directorExtractCategory(note);return c==='Awaria maszyny'||c==='Usterka maszyny';}
     function directorDateFromKey(key,rec){if(key&&String(key).includes('-'))return parseDateKey(key);if(rec&&rec.date)return parseDateKey(rec.date);return null;}
-    function directorCurrentMonthRecords(){return Object.keys(gemaBazaDanych||{}).map(k=>({key:k,rec:gemaBazaDanych[k],date:directorDateFromKey(k,gemaBazaDanych[k])})).filter(x=>x.rec&&x.date&&x.date.getFullYear()===currentYear&&x.date.getMonth()===currentMonth);}
+    function directorCurrentMonthRecords(){return Object.keys((gemaSummaryBazaDanych&&Object.keys(gemaSummaryBazaDanych).length?gemaSummaryBazaDanych:gemaBazaDanych)||{}).map(k=>({key:k,rec:(gemaSummaryBazaDanych&&Object.keys(gemaSummaryBazaDanych).length?gemaSummaryBazaDanych:gemaBazaDanych)[k],date:directorDateFromKey(k,gemaBazaDanych[k])})).filter(x=>x.rec&&x.date&&x.date.getFullYear()===currentYear&&x.date.getMonth()===currentMonth);}
     function directorAvg(records){let s=0,c=0;records.forEach(x=>{const v=parseFloat(x.rec.oee);if(!isNaN(v)&&v>0){s+=v;c++;}});return c?s/c:null;}
-    function directorPrevAvg(){const d=new Date(currentYear,currentMonth-1,1);const y=d.getFullYear(),m=d.getMonth();return directorAvg(Object.keys(gemaBazaDanych||{}).map(k=>({key:k,rec:gemaBazaDanych[k],date:directorDateFromKey(k,gemaBazaDanych[k])})).filter(x=>x.rec&&x.date&&x.date.getFullYear()===y&&x.date.getMonth()===m));}
-    function directorPareto(records){
-        const map={};
-        function ensure(cat){map[cat]=map[cat]||{minutes:0,count:0,changeoverMinutes:0,changeoverCount:0};return map[cat];}
-        function add(cat,min,count=1,isChangeover=false){
-            min=parseFloat(min)||0;
-            count=parseInt(count,10)||0;
-            if(!cat||cat==='Brak przestojów'||min<=0)return;
-            const row=ensure(cat);
-            row.minutes+=min;
-            row.count+=Math.max(1,count);
-            if(isChangeover){
-                row.changeoverMinutes+=min;
-                row.changeoverCount+=Math.max(1,count);
-            }
-        }
-        records.forEach(x=>{
-            const r=x.rec||{};
-            const cat=directorExtractCategory(r.notes||'');
-            const bd=parseFloat(r.breakdown||0)||0;
-            const cl=parseFloat(r.cleaning||0)||0;
-            const sv=parseFloat(r.service||0)||0;
-            add(cat,bd,1,false);
-            add('Zmiana koloru',cl,Math.max(1,getChangeoverCountFromRecord(r)),true);
-            add('Serwis',sv,1,false);
-        });
-        return Object.keys(map).map(k=>({
-            category:k,
-            minutes:map[k].minutes,
-            count:map[k].count,
-            changeoverMinutes:map[k].changeoverMinutes,
-            changeoverCount:map[k].changeoverCount,
-            avgChangeover:map[k].changeoverCount>0?Math.round(map[k].changeoverMinutes/map[k].changeoverCount):null
-        })).sort((a,b)=>b.minutes-a.minutes).slice(0,5);
-    }
+    function directorPrevAvg(){const d=new Date(currentYear,currentMonth-1,1);const y=d.getFullYear(),m=d.getMonth();return directorAvg(Object.keys((gemaSummaryBazaDanych&&Object.keys(gemaSummaryBazaDanych).length?gemaSummaryBazaDanych:gemaBazaDanych)||{}).map(k=>({key:k,rec:(gemaSummaryBazaDanych&&Object.keys(gemaSummaryBazaDanych).length?gemaSummaryBazaDanych:gemaBazaDanych)[k],date:directorDateFromKey(k,gemaBazaDanych[k])})).filter(x=>x.rec&&x.date&&x.date.getFullYear()===y&&x.date.getMonth()===m));}
+    function directorPareto(records){const map={};function add(c,m,n){m=Number(m)||0;if(!c||m<=0)return;if(!map[c])map[c]={category:c,minutes:0,count:0,changeoverMinutes:0,changeoverCount:0};map[c].minutes+=m;map[c].count+=Math.max(1,Number(n)||1);if(c==='Przezbrojenia / zmiana koloru'){map[c].changeoverMinutes+=m;map[c].changeoverCount+=Math.max(1,Number(n)||1)}}(records||[]).forEach(x=>{const r=x.rec||{},main=Number(r.downtimeMinutes!=null?r.downtimeMinutes:r.breakdown)||0,clean=Number(r.cleaning)||0,service=Number(r.service)||0,count=Math.max(0,getChangeoverCountFromRecord(r)),cat=directorExtractCategory(r.notes||'');if(main>0)add(cat==='Brak przestojów'?'Inne przestoje':cat,main,1);if(clean>0)add('Przezbrojenia / zmiana koloru',clean,Math.max(1,count));if(service>0)add('Serwis',service,1)});return Object.values(map).map(r=>{r.avgChangeover=r.changeoverCount?Math.round(r.changeoverMinutes/r.changeoverCount):null;return r}).sort((a,b)=>b.minutes-a.minutes)}
     function directorDaysNoFailure(records){
         // Liczymy dni od ostatniego zgłoszenia awarii/usterki w całej pobranej historii,
         // a nie tylko w aktualnie wybranym miesiącu. Przykład: awaria 29.06,
@@ -2151,6 +2118,7 @@ html[data-theme="light"] select option, html[data-theme="light"] select optgroup
         hasUnsavedChanges = false;
         selectedDayGlobal = getDateKeyForDay(1);
 
+        await loadSummaryDataFromSupabase();
         await loadDataFromSupabase();
         var shiftSelectInit = document.getElementById('reportShift');
         if (shiftSelectInit) {
@@ -2162,11 +2130,60 @@ html[data-theme="light"] select option, html[data-theme="light"] select optgroup
         const savedPanelMode = localStorage.getItem('gema_panel_mode') || 'manager';
         document.getElementById('operatorModeChooser').value = savedPanelMode;
         setPanelMode(savedPanelMode);
-        buildCalendar();
+        withSummaryData(function(){ buildCalendar(); renderTableAndChart(); });
         selectDay(selectedDayGlobal);
-        renderTableAndChart();
     }
 
+    var gemaSummaryBazaDanych = {};
+    async function loadSummaryDataFromSupabase() {
+        const queryStart = new Date(currentYear, currentMonth - 1, 1);
+        const queryEnd = new Date(currentYear, currentMonth + 1, 0);
+        const startOfRange = formatDateKey(queryStart);
+        const endOfRange = formatDateKey(queryEnd);
+        try {
+            const { data, error } = await supabaseClient.from('oee_reports').select('*')
+                .gte('date', startOfRange).lte('date', endOfRange).order('date', {ascending:true});
+            if (error) throw error;
+            const grouped = {};
+            (data || []).forEach(row => {
+                if (!grouped[row.date]) grouped[row.date] = [];
+                grouped[row.date].push(row);
+            });
+            gemaSummaryBazaDanych = {};
+            Object.keys(grouped).forEach(dateKey => {
+                const rows = grouped[dateKey];
+                const valid = rows.filter(r => Number(r.oee) > 0);
+                const avg = valid.length ? valid.reduce((s,r)=>s+Number(r.oee||0),0)/valid.length : 0;
+                const sum = name => rows.reduce((s,r)=>s+(Number(r[name])||0),0);
+                const first = rows.find(r=>String(r.shift)==='1') || rows[0] || {};
+                const last = rows.find(r=>String(r.shift)==='2') || rows[rows.length-1] || {};
+                gemaSummaryBazaDanych[dateKey] = {
+                    date:dateKey,day:parseDateKey(dateKey).getDate(),oee:avg.toFixed(1),
+                    av:(valid.length?valid.reduce((s,r)=>s+Number(r.av||0),0)/valid.length:0).toFixed(1),
+                    perf:(valid.length?valid.reduce((s,r)=>s+Number(r.perf||0),0)/valid.length:0).toFixed(1),
+                    qual:(valid.length?valid.reduce((s,r)=>s+Number(r.qual||0),0)/valid.length:0).toFixed(1),
+                    breakdown:sum('downtime_minutes')||sum('breakdown'),downtimeMinutes:sum('downtime_minutes')||sum('breakdown'),
+                    cleaning:sum('cleaning'),service:sum('service'),bad:sum('bad'),meters:sum('meters'),pieces:sum('pieces'),
+                    mStart:first.m_start,pcsStart:first.pcs_start,hStart:first.h_start||'',mEnd:last.m_end,pcsEnd:last.pcs_end,hEnd:last.h_end||'',
+                    targetSpeed:first.target_speed!=null?Number(first.target_speed):0.8,
+                    notes:rows.map(r=>r.notes||'').filter(Boolean).join(' | '),
+                    changeoverCount:rows.reduce((s,r)=>s+getChangeoverCountFromRecord({notes:r.notes||'',cleaning:r.cleaning}),0),
+                    shiftCount:rows.length
+                };
+            });
+            localStorage.setItem('gema_oee_summary_db_dates',JSON.stringify(gemaSummaryBazaDanych));
+            const e=document.getElementById('db385Status');if(e){e.style.display='block';e.textContent='Baza połączona: '+(data||[]).length+' raportów, '+Object.keys(gemaSummaryBazaDanych).length+' dni w podsumowaniu.';}
+        } catch(err) {
+            console.error('Błąd podsumowania Supabase:',err);
+            gemaSummaryBazaDanych=JSON.parse(localStorage.getItem('gema_oee_summary_db_dates'))||{};
+            const e=document.getElementById('db385Status');if(e){e.style.display='block';e.style.color='#fecaca';e.style.borderColor='#ef4444';e.textContent='Błąd odczytu bazy: '+err.message;}
+        }
+    }
+    function withSummaryData(callback) {
+        const detail = gemaBazaDanych;
+        if (gemaSummaryBazaDanych && Object.keys(gemaSummaryBazaDanych).length) gemaBazaDanych = gemaSummaryBazaDanych;
+        try { return callback(); } finally { gemaBazaDanych = detail; }
+    }
     async function loadDataFromSupabase() {
         // Pobieramy od początku poprzedniego miesiąca, żeby statystyki tygodniowe działały na przełomie miesięcy.
         const queryStart = new Date(currentYear, currentMonth - 1, 1);
@@ -2467,6 +2484,7 @@ html[data-theme="light"] select option, html[data-theme="light"] select optgroup
         selectedReportShift = detectCurrentShift();
         reportShiftSelectedManually = false;
         applyShiftSelectionToUi();
+        await loadSummaryDataFromSupabase();
         await loadDataFromSupabase();
         const savedPanelModeOnLoad = localStorage.getItem('gema_panel_mode') || 'manager';
         setPanelMode(savedPanelModeOnLoad);
@@ -3318,7 +3336,6 @@ html[data-theme="light"] select option, html[data-theme="light"] select optgroup
         var tbody = document.getElementById('historyTable').getElementsByTagName('tbody')[0];
         tbody.innerHTML = "";
         var chartGrid = document.getElementById('chartGrid');
-        if (!chartGrid) { console.error('Brak elementu #chartGrid'); return; }
         chartGrid.innerHTML = "";
 
         CRITICAL_OEE_GUIDE = readStoredCriticalGuide(OEE_CONFIG.criticalGuide, 45);
@@ -3703,5 +3720,5 @@ html[data-theme="light"] body.index2-panel-skin .director-mini-sub,
   if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
 })();
 </script>
-<div class="app383-version">Wersja 3.8.3</div><script id="pwa383-script">(function(){'use strict';const V='3.8.3',NK='oee_notify_383';const $=x=>document.getElementById(x);function pv(v){return String(v||'0').split('.').map(x=>parseInt(x)||0)}function newer(a,b){a=pv(a);b=pv(b);for(let i=0;i<Math.max(a.length,b.length);i++){if((a[i]||0)>(b[i]||0))return true;if((a[i]||0)<(b[i]||0))return false}return false}function status(t){if($('app383Status'))$('app383Status').textContent=t}window.checkUpdate383=async function(force){try{status('Sprawdzanie wersji...');const u=new URL('./version.json',location.href);u.searchParams.set('_',Date.now());const r=await fetch(u,{cache:'no-store',headers:{'Cache-Control':'no-cache, no-store, max-age=0','Pragma':'no-cache'}});if(!r.ok)throw new Error('HTTP '+r.status);const x=await r.json();if(x.version&&newer(x.version,V)){$('update383Text').textContent='Obecna: '+V+' • Nowa: '+x.version+'. '+(x.message||'');$('update383').classList.add('show');status('Dostępna wersja '+x.version)}else{status('Aktualna wersja: '+V);if(force)alert('Masz najnowszą wersję '+V+'.')}}catch(e){status('Błąd sprawdzania aktualizacji');if(force)alert(e.message)}};window.installUpdate383=async function(){const regs='serviceWorker'in navigator?await navigator.serviceWorker.getRegistrations():[];for(const r of regs){await r.update();if(r.waiting)r.waiting.postMessage({type:'SKIP_WAITING'})}const ks=await caches.keys();await Promise.all(ks.map(k=>caches.delete(k)));location.replace('./panel.html?updated='+Date.now())};async function reg(){if(!('serviceWorker'in navigator))return;const r=await navigator.serviceWorker.register('./sw.js',{updateViaCache:'none'});await r.update()}async function show(title,body,tag){if(Notification.permission!=='granted')return false;const r=await navigator.serviceWorker.ready;await r.showNotification(title,{body,tag,icon:'icons/icon-192.png',badge:'icons/icon-192.png',data:{url:'./panel.html'}});return true}function button(){const b=$('notify383');if(!b)return;if(!('Notification'in window)){b.textContent='Niedostępne';return}b.textContent=Notification.permission==='granted'?'Powiadomienia włączone':Notification.permission==='denied'?'Powiadomienia zablokowane':'Włącz powiadomienia'}window.enableNotifications383=async function(){if(!('Notification'in window))return alert('Brak obsługi powiadomień');const x=await Notification.requestPermission();localStorage.setItem(NK,x==='granted'?'1':'0');button();if(x==='granted')await show('Powiadomienia OEE włączone','Powiadomienia działają.','enabled383')};window.testNotification383=async function(){if(Notification.permission!=='granted')return window.enableNotifications383();await show('Test OEE','Powiadomienie testowe działa poprawnie.','test383')};function key(d){return typeof formatDateKey==='function'?formatDateKey(d):d.toISOString().slice(0,10)}function once(k){if(localStorage.getItem(k))return false;localStorage.setItem(k,'1');return true}function notifyCheck(){if(Notification.permission!=='granted'||localStorage.getItem(NK)!=='1')return;const n=new Date(),mins=n.getHours()*60+n.getMinutes(),today=key(n),list=Array.isArray(window.BREAK_SCHEDULE)?window.BREAK_SCHEDULE:[];list.forEach((b,i)=>{if(!b||b.enabled===false)return;if(Array.isArray(b.days)&&b.days.length&&!b.days.map(Number).includes(n.getDay()))return;const q=String(b.start||'').split(':').map(Number),at=(q[0]||0)*60+(q[1]||0),diff=at-mins,base='n383_'+today+'_'+i;if(diff===5&&once(base+'_5'))show(b.kind==='6S'?'6S za 5 minut':'Przerwa za 5 minut',(b.title||'Harmonogram')+' '+b.start,base+'_5');if(diff===0&&once(base+'_0'))show(b.kind==='6S'?'Rozpoczyna się 6S':'Rozpoczyna się przerwa',(b.title||'Harmonogram')+' '+b.start,base+'_0')})}function init(){button();if(Notification.permission==='granted'&&localStorage.getItem(NK)!=='0')localStorage.setItem(NK,'1');reg().then(()=>setTimeout(()=>checkUpdate383(false),700)).catch(console.warn);setInterval(()=>checkUpdate383(false),300000);setInterval(notifyCheck,30000);window.addEventListener('error',e=>{const box=$('app383Error');if(box){box.style.display='block';box.textContent='Błąd aplikacji: '+e.message}})}document.readyState==='loading'?document.addEventListener('DOMContentLoaded',init):init()})();</script></body>
+<div class="v385">Wersja 3.8.5</div></body>
 </html>
