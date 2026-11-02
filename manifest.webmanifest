@@ -1,8 +1,8 @@
 {
   "id": "oee-lakiernia-pwa",
-  "name": "Panel OEE Lakiernia 3.8.0",
-  "short_name": "OEE 3.8.0",
-  "description": "Panel OEE Lakiernia 3.8.0 na aktualnych plikach bazowych.",
+  "name": "Panel OEE Lakiernia 3.8.1",
+  "short_name": "OEE 3.8.1",
+  "description": "Panel OEE Lakiernia 3.8.1 z nową zasadą daty raportu.",
   "lang": "pl",
   "start_url": "./panel.html",
   "scope": "./",
@@ -10,8 +10,8 @@
   "orientation": "any",
   "background_color": "#0f172a",
   "theme_color": "#0f172a",
-  "version": "3.8.0",
-  "app_version": "3.8.0",
+  "version": "3.8.1",
+  "app_version": "3.8.1",
   "icons": [
     {
       "src": "icons/icon-192.png",

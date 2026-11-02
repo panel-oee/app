@@ -1,9 +1,16 @@
-# Changelog 3.8.0
+# Changelog 3.8.1
 
-- Wydanie przygotowane na nowych plikach bazowych `panel.html` i `config_panel.html`.
-- Zachowano aktualne zmiany formularza, konfiguracji przerw, dźwięków i 6S.
-- Pareto liczy przezbrojenia z czasu czyszczenia niezależnie od sztuk wadliwych.
-- Zachowano obsługę `downtime_minutes`.
-- Dodano wykrywanie aktualizacji bez cache `version.json`.
-- Dodano nawigację w jednym rzędzie także na telefonie.
-- Ograniczono główne zapytanie raportów do wymaganych kolumn i bieżącego zakresu dat.
+## [3.8.1] — 2026-11-02
+
+### Zmieniono
+- W systemie dwuzmianowym raport jest przypisywany do dnia kalendarzowego, w którym trwa zmiana.
+- Panel po uruchomieniu zawsze otwiera bieżącą datę kalendarzową, również po weekendzie.
+- Zmiana 1 jest wybierana w godzinach 06:00–13:59 oraz przed 06:00.
+- Zmiana 2 jest wybierana od 14:00, również po godzinie 22:00 jako zakończona zmiana 2.
+- Zapytanie raportów filtruje jednocześnie wybraną zmianę i zakres dat.
+
+### Zachowano
+- Pareto przezbrojeń niezależne od sztuk wadliwych.
+- Obsługę `downtime_minutes`.
+- Aktualizacje PWA bez cache `version.json`.
+- Nawigację w jednym rzędzie na telefonie.

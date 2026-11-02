@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>Panel OEE Lakiernia 3.8.0</title>
+    <title>Panel OEE Lakiernia 3.8.1</title>
 <!-- OEE FAVICON START -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%3E%0A%20%20%3Ccircle%20cx%3D%2232%22%20cy%3D%2232%22%20r%3D%2225%22%20fill%3D%22none%22%20stroke%3D%22%230b5575%22%20stroke-width%3D%2213%22%0A%20%20%20%20%20%20%20%20%20%20stroke-dasharray%3D%2245%20112%22%20stroke-dashoffset%3D%220%22%20transform%3D%22rotate%28-90%2032%2032%29%22%2F%3E%0A%20%20%3Ccircle%20cx%3D%2232%22%20cy%3D%2232%22%20r%3D%2225%22%20fill%3D%22none%22%20stroke%3D%22%23ff9f1c%22%20stroke-width%3D%2213%22%0A%20%20%20%20%20%20%20%20%20%20stroke-dasharray%3D%2245%20112%22%20stroke-dashoffset%3D%22-52%22%20transform%3D%22rotate%28-90%2032%2032%29%22%2F%3E%0A%20%20%3Ccircle%20cx%3D%2232%22%20cy%3D%2232%22%20r%3D%2225%22%20fill%3D%22none%22%20stroke%3D%22%23f43f2e%22%20stroke-width%3D%2213%22%0A%20%20%20%20%20%20%20%20%20%20stroke-dasharray%3D%2245%20112%22%20stroke-dashoffset%3D%22-104%22%20transform%3D%22rotate%28-90%2032%2032%29%22%2F%3E%0A%20%20%3Ccircle%20cx%3D%2232%22%20cy%3D%2232%22%20r%3D%2217%22%20fill%3D%22%23243445%22%2F%3E%0A%20%20%3Ctext%20x%3D%2232%22%20y%3D%2237%22%20text-anchor%3D%22middle%22%20font-family%3D%22Arial%2Csans-serif%22%0A%20%20%20%20%20%20%20%20font-size%3D%2214%22%20font-weight%3D%22700%22%20letter-spacing%3D%220.5%22%20fill%3D%22%23ffffff%22%3EOEE%3C%2Ftext%3E%0A%3C%2Fsvg%3E">
   <link rel="shortcut icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%3E%0A%20%20%3Ccircle%20cx%3D%2232%22%20cy%3D%2232%22%20r%3D%2225%22%20fill%3D%22none%22%20stroke%3D%22%230b5575%22%20stroke-width%3D%2213%22%0A%20%20%20%20%20%20%20%20%20%20stroke-dasharray%3D%2245%20112%22%20stroke-dashoffset%3D%220%22%20transform%3D%22rotate%28-90%2032%2032%29%22%2F%3E%0A%20%20%3Ccircle%20cx%3D%2232%22%20cy%3D%2232%22%20r%3D%2225%22%20fill%3D%22none%22%20stroke%3D%22%23ff9f1c%22%20stroke-width%3D%2213%22%0A%20%20%20%20%20%20%20%20%20%20stroke-dasharray%3D%2245%20112%22%20stroke-dashoffset%3D%22-52%22%20transform%3D%22rotate%28-90%2032%2032%29%22%2F%3E%0A%20%20%3Ccircle%20cx%3D%2232%22%20cy%3D%2232%22%20r%3D%2225%22%20fill%3D%22none%22%20stroke%3D%22%23f43f2e%22%20stroke-width%3D%2213%22%0A%20%20%20%20%20%20%20%20%20%20stroke-dasharray%3D%2245%20112%22%20stroke-dashoffset%3D%22-104%22%20transform%3D%22rotate%28-90%2032%2032%29%22%2F%3E%0A%20%20%3Ccircle%20cx%3D%2232%22%20cy%3D%2232%22%20r%3D%2217%22%20fill%3D%22%23243445%22%2F%3E%0A%20%20%3Ctext%20x%3D%2232%22%20y%3D%2237%22%20text-anchor%3D%22middle%22%20font-family%3D%22Arial%2Csans-serif%22%0A%20%20%20%20%20%20%20%20font-size%3D%2214%22%20font-weight%3D%22700%22%20letter-spacing%3D%220.5%22%20fill%3D%22%23ffffff%22%3EOEE%3C%2Ftext%3E%0A%3C%2Fsvg%3E">
@@ -1265,10 +1265,10 @@ select option, select optgroup { background-color: #111827 !important; color: #f
 html[data-theme="light"] select { color-scheme: light; }
 html[data-theme="light"] select option, html[data-theme="light"] select optgroup { background-color: #ffffff !important; color: #0f172a !important; }
 </style>
-<meta name="theme-color" content="#0f172a"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="app-version" content="3.8.0"><link rel="manifest" href="manifest.webmanifest"><link rel="apple-touch-icon" href="icons/icon-192.png"><style id="pwa380-style">.app380-nav{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:0 0 14px;padding:8px;border:1px solid var(--border-color,#334155);border-radius:12px;background:var(--bg-inputs-flex,#0f172a)}.app380-nav a,.app380-nav button{display:flex;align-items:center;justify-content:center;text-align:center;min-width:0;min-height:48px;padding:8px 5px!important;border:0;border-radius:9px;background:#475569;color:#fff;text-decoration:none;font-weight:900}.app380-nav .active{background:#2563eb}.app380-version{width:max-content;margin:20px auto 0;padding:5px 12px;border:1px solid #38bdf8;border-radius:999px;background:#0f172a;color:#7dd3fc;font:900 11px system-ui}.app380-update{position:fixed;inset:0;display:none;align-items:center;justify-content:center;z-index:260000;padding:16px;background:rgba(2,6,23,.8)}.app380-update.show{display:flex}.app380-update-card{width:min(470px,100%);padding:20px;border:1px solid #38bdf8;border-radius:16px;background:#172338;color:#fff}.app380-actions{display:flex;gap:8px;justify-content:flex-end;margin-top:15px}.app380-later{background:#475569;color:#fff}.app380-now{background:#0284c7;color:#fff}@media(max-width:620px){.app380-nav{gap:5px;padding:6px}.app380-nav a,.app380-nav button{min-height:58px;font-size:clamp(10px,3vw,13px);line-height:1.15;white-space:normal}}</style></head>
-<body><div id="app380Update" class="app380-update"><div class="app380-update-card"><h3>Dostępna aktualizacja aplikacji</h3><div id="app380UpdateText"></div><div class="app380-actions"><button class="app380-later" onclick="document.getElementById('app380Update').classList.remove('show')">Później</button><button class="app380-now" onclick="install380Update()">Aktualizuj teraz</button></div></div></div>
+<meta name="theme-color" content="#0f172a"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="app-version" content="3.8.1"><link rel="manifest" href="manifest.webmanifest"><link rel="apple-touch-icon" href="icons/icon-192.png"><style id="pwa381-style">.app381-nav{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:0 0 14px;padding:8px;border:1px solid var(--border-color,#334155);border-radius:12px;background:var(--bg-inputs-flex,#0f172a)}.app381-nav a,.app381-nav button{display:flex;align-items:center;justify-content:center;text-align:center;min-width:0;min-height:48px;padding:8px 5px!important;border:0;border-radius:9px;background:#475569;color:#fff;text-decoration:none;font-weight:900}.app381-nav .active{background:#2563eb}.app381-version{width:max-content;margin:20px auto 0;padding:5px 12px;border:1px solid #38bdf8;border-radius:999px;background:#0f172a;color:#7dd3fc;font:900 11px system-ui}.app381-update{position:fixed;inset:0;display:none;align-items:center;justify-content:center;z-index:260000;padding:16px;background:rgba(2,6,23,.8)}.app381-update.show{display:flex}.app381-update-card{width:min(470px,100%);padding:20px;border:1px solid #38bdf8;border-radius:16px;background:#172338;color:#fff}.app381-actions{display:flex;gap:8px;justify-content:flex-end;margin-top:15px}.app381-later{background:#475569;color:#fff}.app381-now{background:#0284c7;color:#fff}@media(max-width:620px){.app381-nav{gap:5px;padding:6px}.app381-nav a,.app381-nav button{min-height:58px;font-size:clamp(10px,3vw,13px);line-height:1.15;white-space:normal}}</style></head>
+<body><div id="app381Update" class="app381-update"><div class="app381-update-card"><h3>Dostępna aktualizacja aplikacji</h3><div id="app381UpdateText"></div><div class="app381-actions"><button class="app381-later" onclick="document.getElementById('app381Update').classList.remove('show')">Później</button><button class="app381-now" onclick="install381Update()">Aktualizuj teraz</button></div></div></div>
 
-<div class="container"><nav class="app380-nav"><a class="active" href="panel.html">Panel OEE</a><a href="config_panel.html">Przerwy i 6S</a><button type="button" onclick="openConfigModal()">Konfiguracja progów</button></nav>
+<div class="container"><nav class="app381-nav"><a class="active" href="panel.html">Panel OEE</a><a href="config_panel.html">Przerwy i 6S</a><button type="button" onclick="openConfigModal()">Konfiguracja progów</button></nav>
     <div class="header-container">
         <h2>Miesięczny Panel OEE - Lakiernia</h2>
         <div class="header-controls">
@@ -1662,19 +1662,30 @@ html[data-theme="light"] select option, html[data-theme="light"] select optgroup
     const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
     var currentDateObj = new Date();
-    // Domyślnie wybieramy poprzedni dzień roboczy, pomijając sobotę i niedzielę.
-    // Przykłady:
-    // - wtorek 14.07 -> poniedziałek 13.07
-    // - poniedziałek 13.07 -> piątek 10.07
-    // - niedziela/sobota -> piątek
-    currentDateObj.setDate(currentDateObj.getDate() - 1);
-    while (currentDateObj.getDay() === 0 || currentDateObj.getDay() === 6) {
-        currentDateObj.setDate(currentDateObj.getDate() - 1);
-    }
+    // W systemie dwuzmianowym raport jest przypisany do dnia, w którym trwa zmiana.
+    // Panel zawsze otwiera bieżącą datę kalendarzową, także po weekendzie.
+    currentDateObj.setHours(0, 0, 0, 0);
     var currentYear = currentDateObj.getFullYear();
     var currentMonth = currentDateObj.getMonth();
     var selectedDayGlobal = formatDateKey(currentDateObj);
-    var selectedReportShift = String(localStorage.getItem('gema_report_shift') || '1');
+    var selectedReportShift = detectCurrentShift();
+    var reportShiftSelectedManually = false;
+
+    function detectCurrentShift(now) {
+        now = now || new Date();
+        var minutes = now.getHours() * 60 + now.getMinutes();
+        // 06:00-13:59: zmiana 1; 14:00-21:59: zmiana 2.
+        // Po 22:00 wybieramy zakończoną zmianę 2, a przed 06:00 nadchodzącą zmianę 1.
+        return (minutes >= 14 * 60 && minutes < 24 * 60) ? '2' : '1';
+    }
+
+    function applyShiftSelectionToUi() {
+        var selector = document.getElementById('reportShift');
+        if (selector) selector.value = selectedReportShift;
+        var meta = shiftCloseMeta(selectedReportShift);
+        var hint = document.getElementById('shiftCloseWindow');
+        if (hint) hint.textContent = 'Zamknięcie: ' + meta.start + '-' + meta.end;
+    }
 
     function shiftCloseMeta(shift) {
         return String(shift) === '2'
@@ -1694,7 +1705,7 @@ html[data-theme="light"] select option, html[data-theme="light"] select optgroup
     }
     async function changeReportShift(value) {
         selectedReportShift = String(value) === '2' ? '2' : '1';
-        localStorage.setItem('gema_report_shift', selectedReportShift);
+        reportShiftSelectedManually = true;
         var meta = shiftCloseMeta(selectedReportShift);
         var hint = document.getElementById('shiftCloseWindow');
         if (hint) hint.textContent = 'Zamknięcie: ' + meta.start + '-' + meta.end;
@@ -2164,8 +2175,10 @@ html[data-theme="light"] select option, html[data-theme="light"] select optgroup
         try {
             const { data, error } = await supabaseClient
                 .from('oee_reports')
-                .select('*')
+                .select('date,shift,target_speed,breakdown,downtime_minutes,cleaning,service,bad,m_start,m_end,pcs_start,pcs_end,h_start,h_end,meters,pieces,av,perf,qual,oee,notes,closed_at,close_status')
                 .eq('shift', parseInt(selectedReportShift, 10))
+                .gte('date', startOfRange)
+                .lte('date', endOfRange)
                 .order('date', { ascending: true });
 
             if (error) throw error;
@@ -2447,6 +2460,11 @@ html[data-theme="light"] select option, html[data-theme="light"] select optgroup
         loadBreakScheduleFromLocalStorage();
         await loadBreakScheduleFromSupabase(false);
         await loadOeeConfigFromSupabase();
+        // Przy każdym otwarciu panelu dobieramy zmianę automatycznie według bieżącej godziny.
+        // Użytkownik nadal może ręcznie zmienić wybór w polu „Zmiana”.
+        selectedReportShift = detectCurrentShift();
+        reportShiftSelectedManually = false;
+        applyShiftSelectionToUi();
         await loadDataFromSupabase();
         const savedPanelModeOnLoad = localStorage.getItem('gema_panel_mode') || 'manager';
         setPanelMode(savedPanelModeOnLoad);
@@ -3156,11 +3174,24 @@ html[data-theme="light"] select option, html[data-theme="light"] select optgroup
         targetGuide.style.boxShadow = `0 0 10px ${hexToRgba(targetColor, 0.45)}`;
         chartGrid.appendChild(targetGuide);
 
-        var daysInMonth = new Date(currentYear, currentMonth + 1, 0).getDate();
-            const nextDay = dayNum < daysInMonth ? dayNum + 1 : dayNum;
-            selectDay(getDateKeyForDay(nextDay));
+            // Po zapisie pozostajemy na tej samej dacie. Po zmianie 1 panel przechodzi
+            // od razu do zmiany 2, zamiast przeskakiwać na następny dzień.
+            if (String(selectedReportShift) === '1') {
+                selectedReportShift = '2';
+                reportShiftSelectedManually = false;
+                const shiftSelectAfterSave = document.getElementById('reportShift');
+                if (shiftSelectAfterSave) shiftSelectAfterSave.value = selectedReportShift;
+                const shiftMetaAfterSave = shiftCloseMeta(selectedReportShift);
+                const shiftHintAfterSave = document.getElementById('shiftCloseWindow');
+                if (shiftHintAfterSave) shiftHintAfterSave.textContent = 'Zamknięcie: ' + shiftMetaAfterSave.start + '-' + shiftMetaAfterSave.end;
+                await loadDataFromSupabase();
+                buildCalendar();
+                selectDay(dateKey);
+            } else {
+                selectDay(dateKey);
+            }
             renderTableAndChart();
-            alert("Pomyślnie zweryfikowano ciągłość i zapisano raport w Supabase dla dnia " + dayNum + ".");
+            alert("Zapisano raport dla " + dateKey + ", zmiana " + dbRow.shift + ".");
         } catch (err) {
             console.error("Błąd zapisu Supabase:", err.message);
             alert("BŁĄD ZAPISU W CHMURZE: " + err.message + "\nDane nie zostały utrwalone na serwerze zewnętrznym.");
@@ -3669,5 +3700,5 @@ html[data-theme="light"] body.index2-panel-skin .director-mini-sub,
   if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
 })();
 </script>
-<div class="app380-version">Wersja <span id="appVersionText">3.8.0</span></div><script id="pwa380-script">(function(){const CURRENT_APP_VERSION='3.8.0';function pv(v){return String(v||'0').split('.').map(x=>parseInt(x,10)||0)}function newer(a,b){a=pv(a);b=pv(b);for(let i=0;i<Math.max(a.length,b.length);i++){if((a[i]||0)>(b[i]||0))return true;if((a[i]||0)<(b[i]||0))return false}return false}async function check(force){try{const r=await fetch('./version.json?t='+Date.now(),{cache:'no-store',headers:{'Cache-Control':'no-cache'}});if(!r.ok)return;const v=await r.json();if(v.version&&newer(v.version,CURRENT_APP_VERSION)){document.getElementById('app380UpdateText').textContent='Obecna: '+CURRENT_APP_VERSION+' • Nowa: '+v.version+'. '+(v.message||'');document.getElementById('app380Update').classList.add('show')}}catch(e){console.warn(e)}}window.install380Update=async function(){if('serviceWorker'in navigator){const reg=await navigator.serviceWorker.getRegistration();if(reg){await reg.update();if(reg.waiting)reg.waiting.postMessage({type:'SKIP_WAITING'})}}const ks=await caches.keys();await Promise.all(ks.map(k=>caches.delete(k)));location.replace('./panel.html?updated='+Date.now())};if('serviceWorker'in navigator)window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js').then(r=>r.update()).catch(console.warn));setTimeout(check,1500);setInterval(check,900000);document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='visible')check()})})();</script></body>
+<div class="app381-version">Wersja <span id="appVersionText">3.8.1</span></div><script id="pwa381-script">(function(){const CURRENT_APP_VERSION='3.8.1';function pv(v){return String(v||'0').split('.').map(x=>parseInt(x,10)||0)}function newer(a,b){a=pv(a);b=pv(b);for(let i=0;i<Math.max(a.length,b.length);i++){if((a[i]||0)>(b[i]||0))return true;if((a[i]||0)<(b[i]||0))return false}return false}async function check(){try{const r=await fetch('./version.json?t='+Date.now(),{cache:'no-store',headers:{'Cache-Control':'no-cache'}});if(!r.ok)return;const v=await r.json();if(v.version&&newer(v.version,CURRENT_APP_VERSION)){document.getElementById('app381UpdateText').textContent='Obecna: '+CURRENT_APP_VERSION+' • Nowa: '+v.version+'. '+(v.message||'');document.getElementById('app381Update').classList.add('show')}}catch(e){console.warn(e)}}window.install381Update=async function(){if('serviceWorker'in navigator){const reg=await navigator.serviceWorker.getRegistration();if(reg){await reg.update();if(reg.waiting)reg.waiting.postMessage({type:'SKIP_WAITING'})}}const ks=await caches.keys();await Promise.all(ks.map(k=>caches.delete(k)));location.replace('./panel.html?updated='+Date.now())};if('serviceWorker'in navigator)window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js').then(r=>r.update()).catch(console.warn));setTimeout(check,1500);setInterval(check,900000);document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='visible')check()})})();</script></body>
 </html>

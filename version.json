@@ -1,8 +1,8 @@
 {
-  "version": "3.8.0",
-  "displayVersion": "3.8.0",
+  "version": "3.8.1",
+  "displayVersion": "3.8.1",
   "released": "2026-11-02",
-  "message": "Wersja 3.8.0 przygotowana na nowych plikach bazowych. Zawiera poprawione Pareto przezbrojeń, aktualizacje PWA i optymalizację zapytań.",
-  "minimumVersion": "3.7.1",
+  "message": "Wersja 3.8.1: zaktualizowana zasada daty raportu w systemie dwuzmianowym oraz zachowane poprawki Pareto i PWA.",
+  "minimumVersion": "3.8.0",
   "updateUrl": "./panel.html"
 }
