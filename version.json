@@ -1,8 +1,8 @@
 {
-  "version": "3.8.6",
-  "displayVersion": "3.8.6",
+  "version": "3.9.0",
+  "displayVersion": "3.9.0",
   "released": "2026-11-02",
-  "message": "Naprawiono pierwsze renderowanie kalendarza i wykresu. Dane są widoczne natychmiast, bez przechodzenia do poprzedniego miesiąca.",
-  "minimumVersion": "3.8.5",
+  "message": "Wersja 3.9.0 została przygotowana na poprawionym pliku bazowym z prawidłową logiką raportów zmianowych, kalendarza i wykresów.",
+  "minimumVersion": "3.8.6",
   "updateUrl": "./panel.html"
 }

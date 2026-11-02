@@ -1,12 +1,17 @@
-# Changelog 3.8.6
+# Changelog 3.9.0
 
-## [3.8.6] — 2026-11-02
+## [3.9.0] — 2026-11-02
 
-### Naprawiono
-- Kalendarz i wykres korzystają z danych zbiorczych obu zmian już podczas pierwszego uruchomienia strony.
-- Usunięto konieczność przechodzenia do poprzedniego miesiąca w celu wymuszenia renderowania danych.
-- Formularz nadal korzysta z danych aktualnie wybranej zmiany.
-- Po ustawieniu formularza wykonywane jest końcowe renderowanie kalendarza, wykresu i kart okresowych na danych zbiorczych.
+### Zmieniono
+- Wydanie zbudowano bezpośrednio na poprawionym, oryginalnym `panel.html`.
+- Zachowano poprawioną logikę `allShiftRecords`, raportów zmianowych, kalendarza i wykresów.
+- Nie zastosowano wcześniejszych obejść `gemaSummaryBazaDanych`.
+- Dodano spójny numer wersji, manifest, Service Workera, stronę offline i mechanizm aktualizacji.
+- Dodano przyciski włączania i testowania powiadomień.
+- Do paczki dołączono `assets/quantum-forge.css`, aby odwołanie z plików bazowych nie zwracało błędu 404.
 
-### Przyczyna
-- W 3.8.5 dane zbiorcze były poprawnie pobierane, ale pierwsze wywołanie `buildCalendar()` i `renderTableAndChart()` korzystało z `gemaBazaDanych`, czyli danych wybranej zmiany. Dopiero `changeMonth()` używał `withSummaryData()`.
+### Zachowano
+- Zmienioną zasadę daty w systemie dwuzmianowym.
+- Obsługę `downtime_minutes`.
+- Aktualny moduł przerw, własnych dźwięków i 6S.
+- Poprawione odczyty raportów po migracji 3 zmian na 2 zmiany.
