@@ -1,8 +1,9 @@
-# Changelog 3.7.1
+# Changelog 3.8.0
 
-- Zmieniono numer wydania, aby aplikacja 3.7.0 wykryła aktualizację.
-- Wymuszono pobieranie `version.json` bez pamięci podręcznej.
-- Pareto liczy czas przezbrojeń bezpośrednio z pola `Czyszczenie kabiny (minuty)`.
-- Liczba przezbrojeń pochodzi z pola `Ilość przezbrojeń/dzień`.
-- Przezbrojenia nie zależą od pola `Sztuki wadliwe (poprawki)`.
-- Usunięto ograniczenie rankingu Pareto do pięciu pozycji.
+- Wydanie przygotowane na nowych plikach bazowych `panel.html` i `config_panel.html`.
+- Zachowano aktualne zmiany formularza, konfiguracji przerw, dźwięków i 6S.
+- Pareto liczy przezbrojenia z czasu czyszczenia niezależnie od sztuk wadliwych.
+- Zachowano obsługę `downtime_minutes`.
+- Dodano wykrywanie aktualizacji bez cache `version.json`.
+- Dodano nawigację w jednym rzędzie także na telefonie.
+- Ograniczono główne zapytanie raportów do wymaganych kolumn i bieżącego zakresu dat.

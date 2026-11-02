@@ -1,8 +1,8 @@
 {
-  "version": "3.7.1",
-  "displayVersion": "3.7.1",
-  "released": "2026-09-17",
-  "message": "Poprawka aktualizacji PWA i Pareto: przezbrojenia są liczone z czasu czyszczenia niezależnie od sztuk wadliwych.",
-  "minimumVersion": "3.7.0",
+  "version": "3.8.0",
+  "displayVersion": "3.8.0",
+  "released": "2026-11-02",
+  "message": "Wersja 3.8.0 przygotowana na nowych plikach bazowych. Zawiera poprawione Pareto przezbrojeń, aktualizacje PWA i optymalizację zapytań.",
+  "minimumVersion": "3.7.1",
   "updateUrl": "./panel.html"
 }
