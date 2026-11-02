@@ -1,8 +1,8 @@
 {
-  "version": "3.8.1",
-  "displayVersion": "3.8.1",
+  "version": "3.8.2",
+  "displayVersion": "3.8.2",
   "released": "2026-11-02",
-  "message": "Wersja 3.8.1: zaktualizowana zasada daty raportu w systemie dwuzmianowym oraz zachowane poprawki Pareto i PWA.",
-  "minimumVersion": "3.8.0",
+  "message": "Naprawiono wykrywanie aktualizacji i przywrócono powiadomienia o przerwach oraz brakujących raportach.",
+  "minimumVersion": "3.8.1",
   "updateUrl": "./panel.html"
 }

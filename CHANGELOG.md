@@ -1,16 +1,14 @@
-# Changelog 3.8.1
+# Changelog 3.8.2
 
-## [3.8.1] — 2026-11-02
+## [3.8.2] — 2026-11-02
 
-### Zmieniono
-- W systemie dwuzmianowym raport jest przypisywany do dnia kalendarzowego, w którym trwa zmiana.
-- Panel po uruchomieniu zawsze otwiera bieżącą datę kalendarzową, również po weekendzie.
-- Zmiana 1 jest wybierana w godzinach 06:00–13:59 oraz przed 06:00.
-- Zmiana 2 jest wybierana od 14:00, również po godzinie 22:00 jako zakończona zmiana 2.
-- Zapytanie raportów filtruje jednocześnie wybraną zmianę i zakres dat.
+### Naprawiono
+- Przywrócono przycisk włączania powiadomień i powiadomienie testowe.
+- Dodano przypomnienia 5 minut przed przerwą i w chwili rozpoczęcia przerwy lub 6S.
+- Dodano kontrolę brakującego raportu o 13:50 dla zmiany 1 i o 21:50 dla zmiany 2.
+- Wzmocniono sprawdzanie `version.json` bez cache i dodano ręczny przycisk „Sprawdź aktualizację”.
+- Service Worker używa `updateViaCache: none`, network-first dla HTML i natychmiast aktywuje nowe wydanie.
 
-### Zachowano
-- Pareto przezbrojeń niezależne od sztuk wadliwych.
-- Obsługę `downtime_minutes`.
-- Aktualizacje PWA bez cache `version.json`.
-- Nawigację w jednym rzędzie na telefonie.
+### Ważne
+- Powiadomienia trzeba jednorazowo zaakceptować przyciskiem „Włącz powiadomienia”.
+- Harmonogram lokalny działa, gdy PWA jest uruchomiona albo pozostaje aktywna w tle.
