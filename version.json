@@ -1,8 +1,8 @@
 {
-  "version": "3.8.2",
-  "displayVersion": "3.8.2",
+  "version": "3.8.3",
+  "displayVersion": "3.8.3",
   "released": "2026-11-02",
-  "message": "Naprawiono wykrywanie aktualizacji i przywrócono powiadomienia o przerwach oraz brakujących raportach.",
-  "minimumVersion": "3.8.1",
+  "message": "Usunięto błąd 404 quantum-forge.css, przywrócono wykres i dodano diagnostykę pobierania danych.",
+  "minimumVersion": "3.8.2",
   "updateUrl": "./panel.html"
 }
