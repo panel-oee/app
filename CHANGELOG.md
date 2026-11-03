@@ -1,17 +1,15 @@
-# Changelog 3.9.0
+# Changelog 3.9.1
 
-## [3.9.0] — 2026-11-02
+## [3.9.1] — 2026-11-03
 
 ### Zmieniono
-- Wydanie zbudowano bezpośrednio na poprawionym, oryginalnym `panel.html`.
-- Zachowano poprawioną logikę `allShiftRecords`, raportów zmianowych, kalendarza i wykresów.
-- Nie zastosowano wcześniejszych obejść `gemaSummaryBazaDanych`.
-- Dodano spójny numer wersji, manifest, Service Workera, stronę offline i mechanizm aktualizacji.
-- Dodano przyciski włączania i testowania powiadomień.
-- Do paczki dołączono `assets/quantum-forge.css`, aby odwołanie z plików bazowych nie zwracało błędu 404.
+- Wydanie przebudowano na najnowszych plikach bazowych `panel.html` i `config_panel.html`.
+- Zachowano aktualną logikę `allShiftRecords`, raportów dwóch zmian, kalendarza, wykresów oraz podsumowań.
+- Zachowano zmienioną zasadę daty i obsługę migracji z trzech zmian na dwie.
+- Zaktualizowano numer aplikacji, manifest, `version.json`, Service Workera i cache PWA.
+- Zachowano mechanizm aktualizacji bez cache i test powiadomień.
+- Dołączono `assets/quantum-forge.css`, aby pliki bazowe nie zwracały błędu 404.
 
-### Zachowano
-- Zmienioną zasadę daty w systemie dwuzmianowym.
-- Obsługę `downtime_minutes`.
-- Aktualny moduł przerw, własnych dźwięków i 6S.
-- Poprawione odczyty raportów po migracji 3 zmian na 2 zmiany.
+### Techniczne
+- Cache PWA: `oee-lakiernia-3.9.1`.
+- Minimalna wersja aktualizowana: 3.9.0.
