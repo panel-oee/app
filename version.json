@@ -1,8 +1,0 @@
-{
-  "version": "3.9.1",
-  "displayVersion": "3.9.1",
-  "released": "2026-11-03",
-  "message": "Wersja 3.9.1 została przygotowana na zaktualizowanych plikach bazowych panel.html i config_panel.html, z zachowaniem poprawionej logiki raportów zmianowych.",
-  "minimumVersion": "3.9.0",
-  "updateUrl": "./panel.html"
-}
